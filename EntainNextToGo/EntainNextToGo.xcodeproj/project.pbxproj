@@ -20,6 +20,9 @@
 		B76F3E852B8E071B00781636 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E842B8E071B00781636 /* Colors.swift */; };
 		B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E862B8E075500781636 /* TextViewModifiers.swift */; };
 		B76F3E892B8E0A5800781636 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E882B8E0A5800781636 /* Icons.swift */; };
+		B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */; };
+		B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */; };
+		B76F3E942B8E209400781636 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E8B2B8E117000781636 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		B76F3E842B8E071B00781636 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B76F3E862B8E075500781636 /* TextViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifiers.swift; sourceTree = "<group>"; };
 		B76F3E882B8E0A5800781636 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		B76F3E8B2B8E117000781636 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCountDownStringHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,7 @@
 				B76F3E7F2B8E06C500781636 /* Presentation */,
 				B76F3E542B8DFD3A00781636 /* Preview Content */,
 				B76F3E812B8E06EF00781636 /* Styles */,
+				B76F3E8A2B8E115C00781636 /* Utilities */,
 			);
 			path = EntainNextToGo;
 			sourceTree = "<group>";
@@ -130,9 +137,11 @@
 		B76F3E5E2B8DFD3A00781636 /* EntainNextToGoTests */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3E7A2B8E04A500781636 /* Resources */,
+				B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */,
 				B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */,
 				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
+				B76F3E7A2B8E04A500781636 /* Resources */,
+				B76F3E8D2B8E13FA00781636 /* Utilities */,
 			);
 			path = EntainNextToGoTests;
 			sourceTree = "<group>";
@@ -191,6 +200,22 @@
 				B76F3E862B8E075500781636 /* TextViewModifiers.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		B76F3E8A2B8E115C00781636 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B76F3E8D2B8E13FA00781636 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3E8B2B8E117000781636 /* DateExtension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +353,7 @@
 				B76F3E852B8E071B00781636 /* Colors.swift in Sources */,
 				B76F3E892B8E0A5800781636 /* Icons.swift in Sources */,
 				B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */,
+				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
 				B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */,
 				B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */,
 			);
@@ -338,6 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */,
+				B76F3E942B8E209400781636 /* DateExtension.swift in Sources */,
+				B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */,
 				B76F3E602B8DFD3A00781636 /* EntainNextToGoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

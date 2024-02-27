@@ -31,7 +31,7 @@ struct Colors {
     }
 
     enum Border {
-        static let primary = Color("PrimaryBorder")
+        static let primary = Color("PrimaryBorderColor")
     }
 
     enum Button {
