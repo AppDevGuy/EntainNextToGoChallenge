@@ -1,0 +1,369 @@
+{
+  "status": 200,
+  "data": {
+    "next_to_go_ids": [
+      "d5048316-b424-47a3-8051-c31c76fc2141",
+      "23f29302-7bf8-4d84-83ff-0f8a3def29b4",
+      "8a3b7289-b26b-42a8-8031-054b6df5d285",
+      "fcc18c91-67f6-4f52-9664-e551d7e514f6",
+      "6ad07256-d353-4194-8ada-fe42df21a67a",
+      "04690967-a389-4917-85a1-5d369e9ba551",
+      "2d6bbf9d-fdc9-44d8-9ab2-6605c62f5936",
+      "bd7736b0-0f52-40e7-943f-ceb4dbd750c9",
+      "5812e374-a1f8-4a22-8367-678bb34fae2c",
+      "9a83ec91-0a49-4b31-94e9-9a0e62adb857"
+    ],
+    "race_summaries": {
+      "04690967-a389-4917-85a1-5d369e9ba551": {
+        "race_id": "04690967-a389-4917-85a1-5d369e9ba551",
+        "race_name": "Premier Greyhound Racing On Sky Sports Red Button",
+        "race_number": 6,
+        "meeting_id": "82d22ddb-b61c-476b-a900-ba306ab7f1ca",
+        "meeting_name": "Sheffield Bags",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709035320 },
+        "race_form": {
+          "distance": 500,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "race_comment": "MOULTON CROW (3) ran below her best last time finishing fourth (30.59) over 500m at this track in an A5. Has winning claims on her best figures. SWIFT VINI (1) had been racing in honest fashion recording three placings in a row before finishing fifth (30.32) at this track latest. Comes through a solid form race last start. Should be thereabouts. SLIPPY VICKEY (5) followed a unplaced effort at this track two back with a sound third, beaten 1.2 lengths, last start in an A4 at this track over 500m (30.11). Worth another chance this line-up. LINKS DREAM (4) is in the mix despite missing out at this track last time. ",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Sheffield Bags\",\"state\":\"UK\",\"country\":\"UK\",\"number\":6,\"race_name\":\"Premier Greyhound Racing On Sky Sports Red Button\",\"time\":\"2024-02-27T12:02:00Z\",\"class\":\"A5\",\"start_type\":\"\",\"prizemonies\":{\"total_value\":712},\"rail_position\":\"\",\"track_direction\":\"Right\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "MOULTON CROW (3) ran below her best last time finishing fourth (30.59) over 500m at this track in an A5. Has winning claims on her best figures. SWIFT VINI (1) had been racing in honest fashion recording three placings in a row before finishing fifth (30.32) at this track latest. Comes through a solid form race last start. Should be thereabouts. SLIPPY VICKEY (5) followed a unplaced effort at this track two back with a sound third, beaten 1.2 lengths, last start in an A4 at this track over 500m (30.11). Worth another chance this line-up. LINKS DREAM (4) is in the mix despite missing out at this track last time. "
+        },
+        "venue_id": "764e58a3-a0d2-4b09-b6a4-db218606f7d5",
+        "venue_name": "Sheffield Bags",
+        "venue_state": "UK",
+        "venue_country": "UK"
+      },
+      "23f29302-7bf8-4d84-83ff-0f8a3def29b4": {
+        "race_id": "23f29302-7bf8-4d84-83ff-0f8a3def29b4",
+        "race_name": "The Future Of Racing: Premier Greyhound Racing Tv Stakes",
+        "race_number": 5,
+        "meeting_id": "3f39eef5-f224-4da8-93b4-dd430f101175",
+        "meeting_name": "Newcastle Bags",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709034840 },
+        "race_form": {
+          "distance": 480,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "race_comment": "LIGHTFOOT DARLOW (4) latest effort finished 5th over 480m at this track beaten 5 lengths (30.17) behind ICE TO SEE YOU in a HCP on February 20. Rates a leading player and sure to be in this for a long way. MASTER TOUCH (6) followed a minor placing when jumped from scratch in a handicap at this track two runs ago with a disappointing sixth last start, beaten 3.5 lengths, in an A6 at this track over 480m (29.97). Back to a handicap this time and will start off scratch. Key runner based on best form. ICE TO SEE YOU (3) scored her first victory last start at this track over 480m (29.74). Leading chance again. EMERS MONTY (5) followed a minor placing at this track two runs ago with a sound third, beaten 3 lengths, last start off scratch in a handicap at this track over 480m (29.98). Will start off scratch. Talented handicapper who has one win and two placings from four runs from the staggered start. Worth another chance. ",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Newcastle Bags\",\"state\":\"UK\",\"country\":\"UK\",\"number\":5,\"race_name\":\"The Future Of Racing: Premier Greyhound Racing Tv Stakes\",\"time\":\"2024-02-27T11:54:00Z\",\"class\":\"HCP\",\"start_type\":\"\",\"prizemonies\":{\"total_value\":827},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "LIGHTFOOT DARLOW (4) latest effort finished 5th over 480m at this track beaten 5 lengths (30.17) behind ICE TO SEE YOU in a HCP on February 20. Rates a leading player and sure to be in this for a long way. MASTER TOUCH (6) followed a minor placing when jumped from scratch in a handicap at this track two runs ago with a disappointing sixth last start, beaten 3.5 lengths, in an A6 at this track over 480m (29.97). Back to a handicap this time and will start off scratch. Key runner based on best form. ICE TO SEE YOU (3) scored her first victory last start at this track over 480m (29.74). Leading chance again. EMERS MONTY (5) followed a minor placing at this track two runs ago with a sound third, beaten 3 lengths, last start off scratch in a handicap at this track over 480m (29.98). Will start off scratch. Talented handicapper who has one win and two placings from four runs from the staggered start. Worth another chance. "
+        },
+        "venue_id": "0cb71294-1027-4619-a525-7a66dd7435b7",
+        "venue_name": "Newcastle Bags",
+        "venue_state": "UK",
+        "venue_country": "UK"
+      },
+      "2d6bbf9d-fdc9-44d8-9ab2-6605c62f5936": {
+        "race_id": "2d6bbf9d-fdc9-44d8-9ab2-6605c62f5936",
+        "race_name": "Lopp 3",
+        "race_number": 3,
+        "meeting_id": "428018c6-7369-437e-af4e-ecda8bf56522",
+        "meeting_name": "Jagersro",
+        "category_id": "161d9be2-e909-4326-8c2c-35ed71fb460b",
+        "advertised_start": { "seconds": 1709035440 },
+        "race_form": {
+          "distance": 2140,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "weather": {
+            "id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+            "name": "OCAST",
+            "short_name": "ocast",
+            "icon_uri": "OCAST"
+          },
+          "weather_id": "5ba75165-3cec-11eb-88bb-36fbfdf5d97f",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Jagersro\",\"state\":\"SWE\",\"country\":\"SWE\",\"number\":3,\"race_name\":\"Lopp 3\",\"time\":\"2024-02-27T12:04:00Z\",\"class\":\"\",\"start_type\":\"\",\"prizemonies\":{\"1st\":30000,\"2nd\":15000,\"3rd\":10000,\"4th\":6800,\"5th\":5900,\"6th\":5000,\"7th\":3000,\"8th\":3000},\"rail_position\":\"\",\"track_direction\":\"\",\"track_surface\":\"\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net"
+        },
+        "venue_id": "6c1ddc50-0f8a-429f-957e-d05cf8c5707a",
+        "venue_name": "Jagersro",
+        "venue_state": "SWE",
+        "venue_country": "SWE"
+      },
+      "5812e374-a1f8-4a22-8367-678bb34fae2c": {
+        "race_id": "5812e374-a1f8-4a22-8367-678bb34fae2c",
+        "race_name": "525 Yds (A4)",
+        "race_number": 4,
+        "meeting_id": "705daec9-92d0-4524-8dbe-3d50d4a9b872",
+        "meeting_name": "Tralee",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709035680 },
+        "race_form": {
+          "distance": 480,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "9d03760c-88d2-4c89-9611-ae6eb7cdb76c",
+            "name": "Synthetic",
+            "short_name": "synthetic"
+          },
+          "track_condition_id": "9d03760c-88d2-4c89-9611-ae6eb7cdb76c",
+          "race_comment": "KILLAHAN PEDRO (2) turned in a plain performance last time when fifth at this track over 480m behind Feora Kim (29.57) in an A3. Will give the top chances plenty to think about. COILL BHUI BYRNE (4) was responsible for a modest effort most recently when sixth at this track over 480m behind Meghans Fury (30.09) in an A4. Has ability and can bounce back. FIRE HEIGHT JADE (5) has been in super consistent form, last time breaking from this same trap when second in an A3 at this track (29.26) and making it three straight placings. Has the ability and looks a key chance. SEND IT PINE (1) generally performs well from this box. ",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Tralee\",\"state\":\"IRE\",\"country\":\"IRE\",\"number\":4,\"race_name\":\"525 Yds (A4)\",\"time\":\"2024-02-27T12:08:00Z\",\"class\":\"A4\",\"start_type\":\"\",\"prizemonies\":{\"total_value\":461},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "KILLAHAN PEDRO (2) turned in a plain performance last time when fifth at this track over 480m behind Feora Kim (29.57) in an A3. Will give the top chances plenty to think about. COILL BHUI BYRNE (4) was responsible for a modest effort most recently when sixth at this track over 480m behind Meghans Fury (30.09) in an A4. Has ability and can bounce back. FIRE HEIGHT JADE (5) has been in super consistent form, last time breaking from this same trap when second in an A3 at this track (29.26) and making it three straight placings. Has the ability and looks a key chance. SEND IT PINE (1) generally performs well from this box. "
+        },
+        "venue_id": "b8a1a86c-19ad-4830-a22c-b07bb6983f58",
+        "venue_name": "Tralee",
+        "venue_state": "IRE",
+        "venue_country": "IRE"
+      },
+      "6ad07256-d353-4194-8ada-fe42df21a67a": {
+        "race_id": "6ad07256-d353-4194-8ada-fe42df21a67a",
+        "race_name": "Burdekin Vet Services",
+        "race_number": 10,
+        "meeting_id": "03c276d7-9b20-4f68-9a66-911dd2827dd2",
+        "meeting_name": "Townsville",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709035320 },
+        "race_form": {
+          "distance": 380,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "weather": {
+            "id": "187e38d4-ab03-11e7-85e3-0641c90711b8",
+            "name": "Showers",
+            "short_name": "showers",
+            "icon_uri": "Showers"
+          },
+          "weather_id": "187e38d4-ab03-11e7-85e3-0641c90711b8",
+          "race_comment": "CAVIAR (2) is worth forgiving last start after finishing sixth (22.62) in a Restricted WIN at this track over 380m. Has run slick time here, with a 21.93 PB at this distance. Better than last start and worth following up. SHOWTIME PRISSY (1) was below best at her last start when 7th at this track following a third place finish (22.81) there two back. Has a good record here at this journey. Has won two of three starts from this draw. Should be about the mark. FEDERAL DUKE (6) missed the frame latest when fifth at this track (22.08) but scored four back at this track (21.81). Shapes as one to consider. STORMY ROSE (7) can run a bold race on best form.",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Townsville\",\"state\":\"QLD\",\"country\":\"AUS\",\"number\":10,\"race_name\":\"Burdekin Vet Services\",\"time\":\"2024-02-27T12:02:00Z\",\"class\":\"3rd/4th Grade\",\"start_type\":\"\",\"prizemonies\":{\"1st\":1820,\"2nd\":560,\"3rd\":280,\"4th\":140,\"total_value\":2800},\"rail_position\":\"\",\"track_direction\":\"Right\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "CAVIAR (2) is worth forgiving last start after finishing sixth (22.62) in a Restricted WIN at this track over 380m. Has run slick time here, with a 21.93 PB at this distance. Better than last start and worth following up. SHOWTIME PRISSY (1) was below best at her last start when 7th at this track following a third place finish (22.81) there two back. Has a good record here at this journey. Has won two of three starts from this draw. Should be about the mark. FEDERAL DUKE (6) missed the frame latest when fifth at this track (22.08) but scored four back at this track (21.81). Shapes as one to consider. STORMY ROSE (7) can run a bold race on best form."
+        },
+        "venue_id": "d81176a5-91ed-40a7-88d6-dfe7bc813586",
+        "venue_name": "Townsville",
+        "venue_state": "QLD",
+        "venue_country": "AUS"
+      },
+      "8a3b7289-b26b-42a8-8031-054b6df5d285": {
+        "race_id": "8a3b7289-b26b-42a8-8031-054b6df5d285",
+        "race_name": "Prix Crebillon",
+        "race_number": 3,
+        "meeting_id": "c5e8d684-a29e-4deb-a72d-c34d49566837",
+        "meeting_name": "Nantes",
+        "category_id": "161d9be2-e909-4326-8c2c-35ed71fb460b",
+        "advertised_start": { "seconds": 1709034900 },
+        "race_form": {
+          "distance": 3000,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "weather": {
+            "id": "18c6f07a-b37b-11e7-aabe-061a47531548",
+            "name": "Cloudy",
+            "short_name": "cloudy",
+            "icon_uri": "Cloudy"
+          },
+          "weather_id": "18c6f07a-b37b-11e7-aabe-061a47531548",
+          "race_comment": "KAPUCINE ZEN (8) put a Mauquenchy DQ behind her when winning by 7L at this circuit. Selected to complete a double racing barefoot for the first time. KATRINA DE MARZY (4) took a step forward when victorious by 2.5L at Machecoul. Danger to all with further improvement expected. KALINDA SPOKEN (3) registered a 4L second at Pontchateau. Warrants close consideration racing in a new shoeing combination. KIKA JOSSELYN (5) has won both completed starts including by 3L at this venue in December. Strong claims despite suffering DQ on both subsequent outings.",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Nantes\",\"state\":\"FR\",\"country\":\"FR\",\"number\":3,\"race_name\":\"Prix Crebillon\",\"time\":\"2024-02-27T11:55:00Z\",\"class\":\"E17 HCP\",\"start_type\":\"Walk-up\",\"prizemonies\":{\"1st\":9450,\"2nd\":5250,\"3rd\":2940,\"4th\":1680,\"5th\":1050,\"6th\":420,\"7th\":210,\"total_value\":34539},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"Sand\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "KAPUCINE ZEN (8) put a Mauquenchy DQ behind her when winning by 7L at this circuit. Selected to complete a double racing barefoot for the first time. KATRINA DE MARZY (4) took a step forward when victorious by 2.5L at Machecoul. Danger to all with further improvement expected. KALINDA SPOKEN (3) registered a 4L second at Pontchateau. Warrants close consideration racing in a new shoeing combination. KIKA JOSSELYN (5) has won both completed starts including by 3L at this venue in December. Strong claims despite suffering DQ on both subsequent outings."
+        },
+        "venue_id": "18835b42-f73b-43d0-96cd-a811ec11e27a",
+        "venue_name": "Nantes",
+        "venue_state": "FR",
+        "venue_country": "FR"
+      },
+      "9a83ec91-0a49-4b31-94e9-9a0e62adb857": {
+        "race_id": "9a83ec91-0a49-4b31-94e9-9a0e62adb857",
+        "race_name": "Follow Newcastle Greyhounds On Facebook Stakes",
+        "race_number": 6,
+        "meeting_id": "3f39eef5-f224-4da8-93b4-dd430f101175",
+        "meeting_name": "Newcastle Bags",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709035740 },
+        "race_form": {
+          "distance": 480,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "race_comment": "ALWAYS ABLE (2) finds it hard to break through. Finished third (30.36) at this track last time making it three minors on end. Well placed and gets his chance. EDEN PELE (1) turned in a moderate effort last time when sixth at this track over 480m behind Kooga Kuro (30.91) in an A8. Some good form is emerging from his last run. Has ability and can measure up.    WESTFORTH FORKY (4) has top-three aspirations after placing last time. ",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Newcastle Bags\",\"state\":\"UK\",\"country\":\"UK\",\"number\":6,\"race_name\":\"Follow Newcastle Greyhounds On Facebook Stakes\",\"time\":\"2024-02-27T12:09:00Z\",\"class\":\"A8\",\"start_type\":\"\",\"prizemonies\":{\"total_value\":721},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "ALWAYS ABLE (2) finds it hard to break through. Finished third (30.36) at this track last time making it three minors on end. Well placed and gets his chance. EDEN PELE (1) turned in a moderate effort last time when sixth at this track over 480m behind Kooga Kuro (30.91) in an A8. Some good form is emerging from his last run. Has ability and can measure up.    WESTFORTH FORKY (4) has top-three aspirations after placing last time. "
+        },
+        "venue_id": "0cb71294-1027-4619-a525-7a66dd7435b7",
+        "venue_name": "Newcastle Bags",
+        "venue_state": "UK",
+        "venue_country": "UK"
+      },
+      "bd7736b0-0f52-40e7-943f-ceb4dbd750c9": {
+        "race_id": "bd7736b0-0f52-40e7-943f-ceb4dbd750c9",
+        "race_name": "Join Trotsynd Ms Pace",
+        "race_number": 8,
+        "meeting_id": "134aa709-d6bb-4974-86aa-12dc3731140b",
+        "meeting_name": "Gloucester Park",
+        "category_id": "161d9be2-e909-4326-8c2c-35ed71fb460b",
+        "advertised_start": { "seconds": 1709035500 },
+        "race_form": {
+          "distance": 2130,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "race_comment": "MAKE YOUR MARK (1) has been racing well, filling a top-five position at her last four starts including a second most recently at this track over 2130m. Sure to enjoy an economical run from this draw and she is long overdue for her next win. RATTLIN LILLY (5) found one better two runs back then things went sour last time when she broke and finished 6 metres back in fifth over 2130m at this track. Only needs to get things right to be in contention. GODDESS OF REASON (7) is in the mix following a fourth at her most recent appearance over 2130m at this track. SPORTING GRACE (6) is in the mix after finishing runner-up for the second time in a row last start, beaten a head at Northam. Stick with her.",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Gloucester Park\",\"state\":\"WA\",\"country\":\"AUS\",\"number\":8,\"race_name\":\"Join Trotsynd Ms Pace\",\"time\":\"2024-02-27T12:05:00Z\",\"class\":\"L5$ LT $8,000\",\"start_type\":\"Mobile\",\"prizemonies\":{\"1st\":5155,\"2nd\":1569,\"3rd\":852,\"4th\":583,\"5th\":359,\"total_value\":9360},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "MAKE YOUR MARK (1) has been racing well, filling a top-five position at her last four starts including a second most recently at this track over 2130m. Sure to enjoy an economical run from this draw and she is long overdue for her next win. RATTLIN LILLY (5) found one better two runs back then things went sour last time when she broke and finished 6 metres back in fifth over 2130m at this track. Only needs to get things right to be in contention. GODDESS OF REASON (7) is in the mix following a fourth at her most recent appearance over 2130m at this track. SPORTING GRACE (6) is in the mix after finishing runner-up for the second time in a row last start, beaten a head at Northam. Stick with her."
+        },
+        "venue_id": "05292847-04ca-4d86-bf1c-b83887d6fe67",
+        "venue_name": "Gloucester Park",
+        "venue_state": "WA",
+        "venue_country": "AUS"
+      },
+      "d5048316-b424-47a3-8051-c31c76fc2141": {
+        "race_id": "d5048316-b424-47a3-8051-c31c76fc2141",
+        "race_name": "A1 Salvage \u0026 Hardware",
+        "race_number": 7,
+        "meeting_id": "51942b1a-08bc-4727-bc27-25a085539ec6",
+        "meeting_name": "Mandurah",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709034720 },
+        "race_form": {
+          "distance": 400,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+            "name": "Good",
+            "short_name": "good"
+          },
+          "track_condition_id": "10a14653-a33d-11e7-810d-0a1a4ae29bd2",
+          "race_comment": "GO GETTEM COL (8) was game in defeat off the inside draw last start, finishing second and beaten a neck (22.34) behind Molotov Boy at this track. Sure to be about the mark. CON TUX (2) recorded a 1.5 lengths win (17.25) in a Novice race last time at this track. Can hit the frame with the right run. RUTHLESS TIGER (1) proved too good last time out claiming his maiden success at this track over 400m (22.71). One of the prime contenders. LITTLE WILDFIRE (5) hit the frame here last time and looks a chance again.",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Mandurah\",\"state\":\"WA\",\"country\":\"AUS\",\"number\":7,\"race_name\":\"A1 Salvage \\u0026 Hardware\",\"time\":\"2024-02-27T11:52:00Z\",\"class\":\"NOV\",\"start_type\":\"\",\"prizemonies\":{\"1st\":2957,\"2nd\":903,\"3rd\":452,\"4th\":158,\"total_value\":4470},\"rail_position\":\"\",\"track_direction\":\"Left\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "GO GETTEM COL (8) was game in defeat off the inside draw last start, finishing second and beaten a neck (22.34) behind Molotov Boy at this track. Sure to be about the mark. CON TUX (2) recorded a 1.5 lengths win (17.25) in a Novice race last time at this track. Can hit the frame with the right run. RUTHLESS TIGER (1) proved too good last time out claiming his maiden success at this track over 400m (22.71). One of the prime contenders. LITTLE WILDFIRE (5) hit the frame here last time and looks a chance again."
+        },
+        "venue_id": "3c08f985-daf2-4cf4-b15e-4a472d81acf4",
+        "venue_name": "Mandurah",
+        "venue_state": "WA",
+        "venue_country": "AUS"
+      },
+      "fcc18c91-67f6-4f52-9664-e551d7e514f6": {
+        "race_id": "fcc18c91-67f6-4f52-9664-e551d7e514f6",
+        "race_name": "253Mtrs (D2)",
+        "race_number": 3,
+        "meeting_id": "0cf02e51-d51b-4b19-bb23-ac1e00b978b5",
+        "meeting_name": "Oxford Am",
+        "category_id": "9daef0d7-bf3c-4f50-921d-8e818c60fe61",
+        "advertised_start": { "seconds": 1709035260 },
+        "race_form": {
+          "distance": 253,
+          "distance_type": {
+            "id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+            "name": "Metres",
+            "short_name": "m"
+          },
+          "distance_type_id": "570775ae-09ec-42d5-989d-7c8f06366aa7",
+          "track_condition": {
+            "id": "9d03760c-88d2-4c89-9611-ae6eb7cdb76c",
+            "name": "Synthetic",
+            "short_name": "synthetic"
+          },
+          "track_condition_id": "9d03760c-88d2-4c89-9611-ae6eb7cdb76c",
+          "race_comment": "BLUE GENIE (3) is a first starter from the C D Hamblin kennel by Droopys Sydney out of Hello Laura. Market moves likely to signal ability but profiles strongly for this. SAVANA DOTTY (1) turned in a solid run last start over 253m at this track finishing 4th and beaten only 4 lengths (15.66). Solid record here at the distance winning four races. A big run wouldn't surprise. ACT OF WISDOM (2) turned in a better effort at this track last start, finishing second behind Pincher Mac (15.56) in a D2. Can measure up. WESSEX HEADFORD (5) was unplaced two starts ago then improved to score last time out at this track over 253m (15.77). Tackles tougher grade here but in form and looks a contender again. ",
+          "additional_data": "{\"revealed_race_info\":{\"track_name\":\"Oxford Am\",\"state\":\"UK\",\"country\":\"UK\",\"number\":3,\"race_name\":\"253Mtrs (D2)\",\"time\":\"2024-02-27T12:01:00Z\",\"class\":\"D2\",\"start_type\":\"\",\"prizemonies\":{\"total_value\":538},\"rail_position\":\"\",\"track_direction\":\"Right\",\"track_surface\":\"All Weather\"}}",
+          "generated": 1,
+          "silk_base_url": "drr38safykj6s.cloudfront.net",
+          "race_comment_alternative": "BLUE GENIE (3) is a first starter from the C D Hamblin kennel by Droopys Sydney out of Hello Laura. Market moves likely to signal ability but profiles strongly for this. SAVANA DOTTY (1) turned in a solid run last start over 253m at this track finishing 4th and beaten only 4 lengths (15.66). Solid record here at the distance winning four races. A big run wouldn't surprise. ACT OF WISDOM (2) turned in a better effort at this track last start, finishing second behind Pincher Mac (15.56) in a D2. Can measure up. WESSEX HEADFORD (5) was unplaced two starts ago then improved to score last time out at this track over 253m (15.77). Tackles tougher grade here but in form and looks a contender again. "
+        },
+        "venue_id": "e952db77-b418-46eb-a619-6a82eb50fd43",
+        "venue_name": "Oxford Am",
+        "venue_state": "UK",
+        "venue_country": "UK"
+      }
+    }
+  },
+  "message": "Next 10 races from each category"
+}

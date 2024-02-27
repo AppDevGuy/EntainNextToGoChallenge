@@ -14,6 +14,8 @@
 		B76F3E602B8DFD3A00781636 /* EntainNextToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */; };
 		B76F3E6A2B8DFD3B00781636 /* EntainNextToGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */; };
 		B76F3E6C2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */; };
+		B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */; };
+		B76F3E7C2B8E04CC00781636 /* MockRaceData.json in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E7B2B8E04CC00781636 /* MockRaceData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		B76F3E652B8DFD3B00781636 /* EntainNextToGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntainNextToGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoUITests.swift; sourceTree = "<group>"; };
 		B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCountdownTimeDisplayTests.swift; sourceTree = "<group>"; };
+		B76F3E7B2B8E04CC00781636 /* MockRaceData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockRaceData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,9 @@
 		B76F3E5E2B8DFD3A00781636 /* EntainNextToGoTests */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3E7A2B8E04A500781636 /* Resources */,
 				B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */,
+				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
 			);
 			path = EntainNextToGoTests;
 			sourceTree = "<group>";
@@ -125,6 +131,14 @@
 				B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */,
 			);
 			path = EntainNextToGoUITests;
+			sourceTree = "<group>";
+		};
+		B76F3E7A2B8E04A500781636 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3E7B2B8E04CC00781636 /* MockRaceData.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76F3E7C2B8E04CC00781636 /* MockRaceData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */,
 				B76F3E602B8DFD3A00781636 /* EntainNextToGoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
