@@ -14,6 +14,10 @@ final class RaceCountdownTimeDisplayTests: XCTestCase {
 
     // TODO: Create RaceCountdownTimeDisplay property
 
+    // TODO: Create a Custom Date Object that can work with the mock data
+    // The time and date for creating the file was 27th February 7:55pm
+    // Maintain this time for reference.
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
