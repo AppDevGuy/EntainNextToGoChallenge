@@ -27,7 +27,7 @@
 		B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E992B8F49E900781636 /* RaceResponse.swift */; };
 		B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9B2B8F4A1600781636 /* RaceSummary.swift */; };
 		B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9D2B8F4A2900781636 /* RaceStartDate.swift */; };
-		B76F3EA02B8F4B4700781636 /* RaceDataDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */; };
+		B76F3EA02B8F4B4700781636 /* RaceDataResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */; };
 		B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */; };
 		B76F3EA42B8F535F00781636 /* InvalidJSONData.json in Resources */ = {isa = PBXBuildFile; fileRef = B76F3EA32B8F535F00781636 /* InvalidJSONData.json */; };
 /* End PBXBuildFile section */
@@ -73,7 +73,7 @@
 		B76F3E992B8F49E900781636 /* RaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponse.swift; sourceTree = "<group>"; };
 		B76F3E9B2B8F4A1600781636 /* RaceSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummary.swift; sourceTree = "<group>"; };
 		B76F3E9D2B8F4A2900781636 /* RaceStartDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceStartDate.swift; sourceTree = "<group>"; };
-		B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataDecoding.swift; sourceTree = "<group>"; };
+		B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataResponseDecoding.swift; sourceTree = "<group>"; };
 		B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileHelper.swift; sourceTree = "<group>"; };
 		B76F3EA32B8F535F00781636 /* InvalidJSONData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidJSONData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +153,7 @@
 			children = (
 				B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */,
 				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
-				B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */,
+				B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */,
 				B76F3E7A2B8E04A500781636 /* Resources */,
 				B76F3E8D2B8E13FA00781636 /* Utilities */,
 			);
@@ -393,7 +393,7 @@
 				B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */,
 				B76F3E942B8E209400781636 /* DateExtension.swift in Sources */,
 				B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */,
-				B76F3EA02B8F4B4700781636 /* RaceDataDecoding.swift in Sources */,
+				B76F3EA02B8F4B4700781636 /* RaceDataResponseDecoding.swift in Sources */,
 				B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

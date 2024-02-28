@@ -9,10 +9,13 @@ import XCTest
 @testable import EntainNextToGo
 import Combine
 
-final class RaceDataDecoding: XCTestCase {
+final class RaceDataResponseDecoding: XCTestCase {
 
+    // MARK: - Variables
     var jsonHelper: JSONFileHelper!
     var cancellables: Set<AnyCancellable> = []
+
+    // MARK: - Life Cycle
 
     override func setUpWithError() throws {
         jsonHelper = JSONFileHelper()
@@ -112,20 +115,32 @@ final class RaceDataDecoding: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
     }
 
-
 }
 
-fileprivate extension RaceDataDecoding {
+fileprivate extension RaceDataResponseDecoding {
 
     func defaultRaceDataAssertions(for response: RaceResponse) throws {
         XCTAssertEqual(response.status, 200)
         XCTAssertNotNil(response.data.raceSummaries)
-        XCTAssertNotNil(response.data.nextToGoIds.contains("d5048316-b424-47a3-8051-c31c76fc2141"))
         XCTAssertEqual(response.data.raceSummaries.count, 10)
-        let race = try XCTUnwrap(response.data.raceSummaries["d5048316-b424-47a3-8051-c31c76fc2141"])
-        XCTAssertEqual(race.raceName, "A1 Salvage & Hardware")
-        XCTAssertEqual(race.meetingName, "Mandurah")
-        XCTAssertEqual(race.meetingId, "51942b1a-08bc-4727-bc27-25a085539ec6")
+
+        // Test race that has already started
+        let oldRaceId = "d5048316-b424-47a3-8051-c31c76fc2141"
+        XCTAssertNotNil(response.data.nextToGoIds.contains(oldRaceId))
+        let oldRace = try XCTUnwrap(response.data.raceSummaries[oldRaceId])
+        XCTAssertEqual(oldRace.raceName, "A1 Salvage & Hardware")
+        XCTAssertEqual(oldRace.meetingName, "Mandurah")
+        XCTAssertEqual(oldRace.meetingId, "51942b1a-08bc-4727-bc27-25a085539ec6")
+        XCTAssertEqual(oldRace.advertisedStart.seconds, 1709034720)
+
+        // Test race that is upcoming
+        let upcomingRaceId = "bd7736b0-0f52-40e7-943f-ceb4dbd750c9"
+        XCTAssertNotNil(response.data.nextToGoIds.contains(upcomingRaceId))
+        let newRace = try XCTUnwrap(response.data.raceSummaries[upcomingRaceId])
+        XCTAssertEqual(newRace.raceName, "Join Trotsynd Ms Pace")
+        XCTAssertEqual(newRace.meetingName, "Gloucester Park")
+        XCTAssertEqual(newRace.meetingId, "134aa709-d6bb-4974-86aa-12dc3731140b")
+        XCTAssertEqual(newRace.advertisedStart.seconds, 1709035500)
     }
 
 }

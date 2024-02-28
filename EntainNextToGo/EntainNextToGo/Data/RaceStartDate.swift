@@ -9,5 +9,5 @@ import Foundation
 
 struct RaceStartDate: Codable {
     /// Epoch time.
-    let seconds: Int
+    let seconds: Double
 }
