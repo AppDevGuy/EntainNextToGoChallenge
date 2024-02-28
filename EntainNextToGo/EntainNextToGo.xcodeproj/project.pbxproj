@@ -11,7 +11,6 @@
 		B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E502B8DFD3900781636 /* ContentView.swift */; };
 		B76F3E532B8DFD3A00781636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E522B8DFD3A00781636 /* Assets.xcassets */; };
 		B76F3E562B8DFD3A00781636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E552B8DFD3A00781636 /* Preview Assets.xcassets */; };
-		B76F3E602B8DFD3A00781636 /* EntainNextToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */; };
 		B76F3E6A2B8DFD3B00781636 /* EntainNextToGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */; };
 		B76F3E6C2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */; };
 		B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */; };
@@ -23,6 +22,14 @@
 		B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */; };
 		B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */; };
 		B76F3E942B8E209400781636 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E8B2B8E117000781636 /* DateExtension.swift */; };
+		B76F3E962B8F432600781636 /* RaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E952B8F432600781636 /* RaceData.swift */; };
+		B76F3E982B8F436500781636 /* JSONUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E972B8F436500781636 /* JSONUtility.swift */; };
+		B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E992B8F49E900781636 /* RaceResponse.swift */; };
+		B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9B2B8F4A1600781636 /* RaceSummary.swift */; };
+		B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9D2B8F4A2900781636 /* RaceStartDate.swift */; };
+		B76F3EA02B8F4B4700781636 /* RaceDataDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */; };
+		B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */; };
+		B76F3EA42B8F535F00781636 /* InvalidJSONData.json in Resources */ = {isa = PBXBuildFile; fileRef = B76F3EA32B8F535F00781636 /* InvalidJSONData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +56,6 @@
 		B76F3E522B8DFD3A00781636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76F3E552B8DFD3A00781636 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B76F3E5B2B8DFD3A00781636 /* EntainNextToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntainNextToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoTests.swift; sourceTree = "<group>"; };
 		B76F3E652B8DFD3B00781636 /* EntainNextToGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntainNextToGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoUITests.swift; sourceTree = "<group>"; };
 		B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -62,6 +68,14 @@
 		B76F3E8B2B8E117000781636 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCountDownStringHelper.swift; sourceTree = "<group>"; };
+		B76F3E952B8F432600781636 /* RaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceData.swift; sourceTree = "<group>"; };
+		B76F3E972B8F436500781636 /* JSONUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUtility.swift; sourceTree = "<group>"; };
+		B76F3E992B8F49E900781636 /* RaceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceResponse.swift; sourceTree = "<group>"; };
+		B76F3E9B2B8F4A1600781636 /* RaceSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummary.swift; sourceTree = "<group>"; };
+		B76F3E9D2B8F4A2900781636 /* RaceStartDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceStartDate.swift; sourceTree = "<group>"; };
+		B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataDecoding.swift; sourceTree = "<group>"; };
+		B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileHelper.swift; sourceTree = "<group>"; };
+		B76F3EA32B8F535F00781636 /* InvalidJSONData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidJSONData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */,
-				B76F3E5F2B8DFD3A00781636 /* EntainNextToGoTests.swift */,
 				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
+				B76F3E9F2B8F4B4700781636 /* RaceDataDecoding.swift */,
 				B76F3E7A2B8E04A500781636 /* Resources */,
 				B76F3E8D2B8E13FA00781636 /* Utilities */,
 			);
@@ -159,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B76F3E7B2B8E04CC00781636 /* MockRaceData.json */,
+				B76F3EA32B8F535F00781636 /* InvalidJSONData.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -173,6 +188,10 @@
 		B76F3E7E2B8E06BE00781636 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3E952B8F432600781636 /* RaceData.swift */,
+				B76F3E992B8F49E900781636 /* RaceResponse.swift */,
+				B76F3E9D2B8F4A2900781636 /* RaceStartDate.swift */,
+				B76F3E9B2B8F4A1600781636 /* RaceSummary.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -206,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
+				B76F3E972B8F436500781636 /* JSONUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -214,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				B76F3E8B2B8E117000781636 /* DateExtension.swift */,
+				B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -332,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76F3E7C2B8E04CC00781636 /* MockRaceData.json in Resources */,
+				B76F3EA42B8F535F00781636 /* InvalidJSONData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +377,12 @@
 				B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */,
 				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
 				B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */,
+				B76F3E962B8F432600781636 /* RaceData.swift in Sources */,
+				B76F3E982B8F436500781636 /* JSONUtility.swift in Sources */,
 				B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */,
+				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
+				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
+				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +392,9 @@
 			files = (
 				B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */,
 				B76F3E942B8E209400781636 /* DateExtension.swift in Sources */,
+				B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */,
+				B76F3EA02B8F4B4700781636 /* RaceDataDecoding.swift in Sources */,
 				B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */,
-				B76F3E602B8DFD3A00781636 /* EntainNextToGoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

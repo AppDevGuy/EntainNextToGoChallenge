@@ -33,23 +33,33 @@ final class RaceCountdownTimeDisplayTests: XCTestCase {
     /// Should return "XXs" for no minutes and double digit seconds
     func testShouldReturnTwoDigitSecondsForZeroMinutesDoubleDigitSeconds() throws {
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709035002
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "33s")
     }
 
     /// Should return "Xs" for no minutes and single digit seconds
     func testShouldReturnSingleDigitSecondsForZeroMinutesSingleDigitSeconds() throws {
-        // TODO: Implement Test
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709034974
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "5s")
     }
 
     /// Should return "-XXs" for negative no minutes and  double digit seconds
     func testShouldReturnNegativeTwoDigitSecondsForNegativeZeroMinutesDoubleDigitSeconds() throws {
-        // TODO: Implement Test
+        let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709034934
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-35s")
     }
 
     /// Should return "Xs" for negative no minutes and single digit seconds
     func testShouldReturnNegativeSingleDigitSecondsForNegativeZeroMinutesSingleDigitSeconds() throws {
-        // TODO: Implement Test
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709034964
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-5s")
     }
 
     // MARK: - Test Minutes
@@ -139,22 +149,42 @@ final class RaceCountdownTimeDisplayTests: XCTestCase {
         XCTAssertEqual(displayTime, "4m 59s")
     }
 
-    /// Should return "59m 59s" for exactly 00:59:59
+    /// Should return "59m" for exactly 00:59:59
     func testShouldReturn59m59sForFiftyNineMinutesFiftyNineSeconds() throws {
-        // TODO: Implement Test
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709038568
+        let diff = abs(date.timeIntervalSince(Date(timeIntervalSince1970: epoch)))
+        // 59 minutes + 59 seconds
+        XCTAssertEqual(diff, 59 * 60 + 59)
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "59m")
+    }
+
+    /// Should return "1h" for exactly 00:60:00
+    func testShouldReturn1hForSixtyMinutesZeroSeconds() throws {
+        let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709038569
+        let diff = abs(date.timeIntervalSince(Date(timeIntervalSince1970: epoch)))
+        // 60 minutes
+        XCTAssertEqual(diff, 60 * 60)
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "1h")
     }
 
     /// Should return "-59s" for exactly -00:00:59
     func testShouldReturnNegative59sForNegativeFiftyNineSeconds() throws {
-        // TODO: Implement Test
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709034910
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-59s")
     }
 
     /// Should return "-1m 59s" for exactly -00:01:59
     func testShouldReturnNegative1m59sForNegative1minuteFiftyNineSeconds() throws {
-        // TODO: Implement Test
         let date = try XCTUnwrap(mockDate)
+        let epoch: TimeInterval = 1709034850
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-1m 59s")
     }
 
 }
