@@ -30,6 +30,14 @@
 		B76F3EA02B8F4B4700781636 /* RaceDataResponseDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */; };
 		B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */; };
 		B76F3EA42B8F535F00781636 /* InvalidJSONData.json in Resources */ = {isa = PBXBuildFile; fileRef = B76F3EA32B8F535F00781636 /* InvalidJSONData.json */; };
+		B76F3EA62B8F5F2700781636 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA52B8F5F2700781636 /* TimerManager.swift */; };
+		B76F3EA82B8F63EE00781636 /* TimerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */; };
+		B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA92B8F65DA00781636 /* NetworkManager.swift */; };
+		B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EAB2B8F65E400781636 /* NetworkInterface.swift */; };
+		B76F3EAF2B8F676C00781636 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */; };
+		B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB02B8F679700781636 /* RaceDataService.swift */; };
+		B76F3EB32B8F67F800781636 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB22B8F67F800781636 /* MockNetworkManager.swift */; };
+		B76F3EB52B8F6AB000781636 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +84,14 @@
 		B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataResponseDecoding.swift; sourceTree = "<group>"; };
 		B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileHelper.swift; sourceTree = "<group>"; };
 		B76F3EA32B8F535F00781636 /* InvalidJSONData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InvalidJSONData.json; sourceTree = "<group>"; };
+		B76F3EA52B8F5F2700781636 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManagerTests.swift; sourceTree = "<group>"; };
+		B76F3EA92B8F65DA00781636 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B76F3EAB2B8F65E400781636 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		B76F3EB02B8F679700781636 /* RaceDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataService.swift; sourceTree = "<group>"; };
+		B76F3EB22B8F67F800781636 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +142,7 @@
 		B76F3E4D2B8DFD3900781636 /* EntainNextToGo */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3EAD2B8F661A00781636 /* Constants */,
 				B76F3E522B8DFD3A00781636 /* Assets.xcassets */,
 				B76F3E502B8DFD3900781636 /* ContentView.swift */,
 				B76F3E7E2B8E06BE00781636 /* Data */,
@@ -151,10 +168,12 @@
 		B76F3E5E2B8DFD3A00781636 /* EntainNextToGoTests */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */,
 				B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */,
 				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
 				B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */,
 				B76F3E7A2B8E04A500781636 /* Resources */,
+				B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */,
 				B76F3E8D2B8E13FA00781636 /* Utilities */,
 			);
 			path = EntainNextToGoTests;
@@ -181,6 +200,8 @@
 		B76F3E7D2B8E06B900781636 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3EA52B8F5F2700781636 /* TimerManager.swift */,
+				B76F3EB02B8F679700781636 /* RaceDataService.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -206,6 +227,8 @@
 		B76F3E802B8E06D100781636 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3EAB2B8F65E400781636 /* NetworkInterface.swift */,
+				B76F3EA92B8F65DA00781636 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -235,8 +258,17 @@
 			children = (
 				B76F3E8B2B8E117000781636 /* DateExtension.swift */,
 				B76F3EA12B8F4D1000781636 /* JSONFileHelper.swift */,
+				B76F3EB22B8F67F800781636 /* MockNetworkManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B76F3EAD2B8F661A00781636 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,13 +408,18 @@
 				B76F3E892B8E0A5800781636 /* Icons.swift in Sources */,
 				B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */,
 				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
+				B76F3EA62B8F5F2700781636 /* TimerManager.swift in Sources */,
 				B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */,
+				B76F3EAF2B8F676C00781636 /* APIEndpoint.swift in Sources */,
 				B76F3E962B8F432600781636 /* RaceData.swift in Sources */,
 				B76F3E982B8F436500781636 /* JSONUtility.swift in Sources */,
 				B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */,
+				B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */,
 				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
+				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
 				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
+				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,8 +430,11 @@
 				B76F3E792B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift in Sources */,
 				B76F3E942B8E209400781636 /* DateExtension.swift in Sources */,
 				B76F3EA22B8F4D1000781636 /* JSONFileHelper.swift in Sources */,
+				B76F3EA82B8F63EE00781636 /* TimerManagerTests.swift in Sources */,
+				B76F3EB32B8F67F800781636 /* MockNetworkManager.swift in Sources */,
 				B76F3EA02B8F4B4700781636 /* RaceDataResponseDecoding.swift in Sources */,
 				B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */,
+				B76F3EB52B8F6AB000781636 /* DataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

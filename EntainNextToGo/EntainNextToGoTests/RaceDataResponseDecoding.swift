@@ -117,7 +117,7 @@ final class RaceDataResponseDecoding: XCTestCase {
 
 }
 
-fileprivate extension RaceDataResponseDecoding {
+private extension RaceDataResponseDecoding {
 
     func defaultRaceDataAssertions(for response: RaceResponse) throws {
         XCTAssertEqual(response.status, 200)
@@ -125,6 +125,8 @@ fileprivate extension RaceDataResponseDecoding {
         XCTAssertEqual(response.data.raceSummaries.count, 10)
 
         // Test race that has already started
+        // This race also contains some funci ASCII in the race name
+        // Make sure it decodes fine.
         let oldRaceId = "d5048316-b424-47a3-8051-c31c76fc2141"
         XCTAssertNotNil(response.data.nextToGoIds.contains(oldRaceId))
         let oldRace = try XCTUnwrap(response.data.raceSummaries[oldRaceId])
