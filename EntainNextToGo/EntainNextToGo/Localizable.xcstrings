@@ -1,0 +1,66 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "%@ for Meet %@ happening in %@. Race %lld. Tap row to see more information." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ for Meet %2$@ happening in %3$@. Race %4$lld. Tap row to see more information."
+          }
+        }
+      }
+    },
+    "Category:" : {
+
+    },
+    "Meet Name:" : {
+
+    },
+    "Next to go" : {
+
+    },
+    "Race Category Filters" : {
+
+    },
+    "Race information" : {
+
+    },
+    "Race Information: Race category %@ for Meet %@. Race number %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Race Information: Race category %1$@ for Meet %2$@. Race number %3$lld"
+          }
+        }
+      }
+    },
+    "Race Name:" : {
+
+    },
+    "Race: %lld" : {
+
+    },
+    "Start Time:" : {
+
+    },
+    "Tap to set the %@ filter %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Tap to set the %1$@ filter %2$@"
+          }
+        }
+      }
+    },
+    "You can filter races by tapping on the icons below." : {
+
+    }
+  },
+  "version" : "1.0"
+}
