@@ -63,6 +63,9 @@ private extension RaceListViewModel {
             .sink(receiveValue: { [weak self] updatedDate in
                 guard let self else { return }
                 self.currentDate = updatedDate
+                if self._raceDataDisplayService.shouldUpdateDisplay() {
+                    self.updateRaceSummaries()
+                }
             })
             .store(in: &cancellables)
         raceDataServiceTimer.start()
@@ -94,13 +97,16 @@ private extension RaceListViewModel {
         let raceDataSummaries = raceData.raceSummaries.values
         let summaries = Array(raceDataSummaries)
         _raceDataDisplayService.updateRaceSummaries(with: summaries)
-        raceSummaries = _raceDataDisplayService.displayRaceSummaries
+        updateRaceSummaries()
         isFetching = false
     }
 
+    func updateRaceSummaries() {
+        raceSummaries = _raceDataDisplayService.displayRaceSummaries
+    }
 }
 
-// MARK: - Publif Methods
+// MARK: - Public Methods
 
 public extension RaceListViewModel {
 

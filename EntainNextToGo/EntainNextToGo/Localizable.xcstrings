@@ -17,6 +17,12 @@
     "Category:" : {
 
     },
+    "Country:" : {
+
+    },
+    "Hold tight, we're looking for your races" : {
+
+    },
     "Meet Name:" : {
 
     },
@@ -52,6 +58,9 @@
 
     },
     "Start Time:" : {
+
+    },
+    "State:" : {
 
     },
     "Tap to set the %@ filter %@" : {

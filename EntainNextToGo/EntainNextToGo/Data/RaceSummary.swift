@@ -16,6 +16,8 @@ public struct RaceSummary: Codable, Identifiable, Hashable {
     let meetingId: String
     let meetingName: String
     let categoryId: String
+    let venueState: String
+    let venueCountry: String
     let advertisedStart: RaceStartDate
 
     enum CodingKeys: String, CodingKey {
@@ -26,5 +28,7 @@ public struct RaceSummary: Codable, Identifiable, Hashable {
         case meetingName = "meeting_name"
         case categoryId = "category_id"
         case advertisedStart = "advertised_start"
+        case venueState = "venue_state"
+        case venueCountry = "venue_country"
     }
 }

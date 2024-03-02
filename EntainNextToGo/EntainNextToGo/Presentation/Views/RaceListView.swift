@@ -25,16 +25,17 @@ struct RaceListView: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundStyle(Colors.Brand.primary)
+                    Spacer()
                     Text(
-                        viewModel.isFetching ? "Hold tight, we're racing to get your races" :
+                        viewModel.isFetching ? "Sit tight, we're looking for your races." :
                         viewModel.networkConnectivity.isNetworkConnected ?
                         viewModel.activeRaceCategories.count < 1 ?
-                        "To see some races please update your filter selection." :
+                        "Please update your filter selection." :
                             "No races available. Please check back later." :
                             "Please check your internet connection."
                     )
                     .multilineTextAlignment(.center)
-                    .subheadlineStyle()
+                    .subtitleStyle()
                     Spacer()
                 }
                 .padding(Sizes.Space.extraLarge)

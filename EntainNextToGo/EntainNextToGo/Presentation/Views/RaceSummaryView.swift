@@ -76,6 +76,8 @@ struct RaceSummaryView: View {
                     meetingId: "12345",
                     meetingName: "Sheffield Bags",
                     categoryId: RaceCategory.horse.rawValue,
+                    venueState: "WA",
+                    venueCountry: "AUS",
                     advertisedStart: RaceStartDate(
                         seconds: Date().timeIntervalSince1970 + 200
                     )

@@ -24,7 +24,7 @@ enum Constants {
 
     struct RaceExpiryPeriod {
         /// The expiry time for the races is if they started 60 seconds ago
-        static let seconds = 60
+        static let seconds: Double = 60
     }
 
 }

@@ -20,6 +20,8 @@ final class RaceDisplayDataServiceTests: XCTestCase {
     private let mockDefaultDate = Date(fromString: "27 02 2024 19:56:09")
     /// The time and date for creating the 100 results file was 28th Feb 21:52
     private let mock100Date = Date(fromString: "2 03 2024 14:32:56")
+    /// Race Expiry Period
+    private let expiry = Constants.RaceExpiryPeriod.seconds
 
     // MARK: - Life Cycle
 
@@ -285,7 +287,7 @@ final class RaceDisplayDataServiceTests: XCTestCase {
 
     // MARK: - Data should be ordered
 
-    func testThatResultsAreOrderedLowestEpochToHighestEpochDate() throws {
+    func testShouldReturnResultsAreOrderedLowestEpochToHighestEpochDate() throws {
         let date = try XCTUnwrap(mock100Date)
         let raceSummaries = try getRaceData(for: .oneHundredRacesData)
         XCTAssertEqual(raceSummaries.count, 45)
@@ -296,6 +298,27 @@ final class RaceDisplayDataServiceTests: XCTestCase {
         let lowest = try XCTUnwrap(raceDisplayDataService.displayRaceSummaries.first?.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero))
         let highest = try XCTUnwrap(raceDisplayDataService.displayRaceSummaries.last?.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero))
         XCTAssertTrue(lowest < highest)
+    }
+
+    // MARK: - Data Should Be Updated
+
+    func testShouldReturnRaceSummaryDataNeedsUpdate() throws {
+        let date = Date()
+        let raceDisplayDataService = RaceDisplayDataService(raceSummaries: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970))], raceExpirySeconds: expiry) {
+            Date()
+        }
+        XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
+        XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 1)
+        // Calling update should trigger the update and remove the number of items
+        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 61))])
+        XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
+        XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 0)
+        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 58))])
+        XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
+        XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 1)
+        // Should need to be updated after 3 second
+        sleep(3)
+        XCTAssertTrue(raceDisplayDataService.shouldUpdateDisplay())
     }
 
 }

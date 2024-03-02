@@ -108,4 +108,17 @@ public extension RaceDisplayDataService {
         updateDisplayRaceSummaryData()
     }
 
+    /// Will return true if the first race summary start time is older than the date minue expiry
+    func shouldUpdateDisplay() -> Bool {
+        guard let summary = displayRaceSummaries.first else {
+            return false
+        }
+        let raceExpiryDate = (currentDateTime().timeIntervalSince1970 - raceExpirySeconds).rounded(.toNearestOrAwayFromZero)
+        let firstSummaryStartDate = summary.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero)
+        if firstSummaryStartDate <= raceExpiryDate {
+            updateDisplayRaceSummaryData()
+        }
+        return firstSummaryStartDate <= raceExpiryDate
+    }
+
 }

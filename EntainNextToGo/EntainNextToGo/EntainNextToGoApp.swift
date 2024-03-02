@@ -16,6 +16,7 @@ struct EntainNextToGoApp: App {
         raceDataService: RaceDataService(),
         raceDataDisplayService:
             RaceDisplayDataService(
+                raceExpirySeconds: Constants.RaceExpiryPeriod.seconds,
                 currentDateTime: {
                     Date()
                 }

@@ -23,27 +23,46 @@ struct RaceSummaryInformationView: View {
                     .subtitleStyle()
                 Text(raceSummary.raceName)
                     .bodyStyle()
+                Spacer()
             }
             HStack(alignment: .top) {
                 Text("Meet Name:")
                     .subtitleStyle()
                 Text(raceSummary.meetingName)
                     .bodyStyle()
+                Spacer()
+            }
+            HStack(alignment: .top) {
+                Text("State:")
+                    .subtitleStyle()
+                Text(raceSummary.venueState)
+                    .bodyStyle()
+                Spacer()
+            }
+            HStack(alignment: .top) {
+                Text("Country:")
+                    .subtitleStyle()
+                Text(raceSummary.venueCountry)
+                    .bodyStyle()
+                Spacer()
             }
             HStack(alignment: .top) {
                 Text("Category:")
                     .subtitleStyle()
                 Text(raceSummary.categoryId.raceCategory.categoryName)
                     .bodyStyle()
+                Spacer()
             }
             HStack(alignment: .top) {
                 Text("Start Time:")
                     .subtitleStyle()
                 Text("\(Date(timeIntervalSince1970: raceSummary.advertisedStart.seconds))")
                     .bodyStyle()
+                Spacer()
             }
             Spacer()
         }
+        .padding(.horizontal, Sizes.Space.large)
         .navigationTitle("Race information")
         .accessibilityLabel(Text("Race Information: Race category \(raceSummary.categoryId.raceCategory.categoryName) for Meet \(raceSummary.meetingName). Race number \(raceSummary.raceNumber)"))
     }
@@ -58,6 +77,8 @@ struct RaceSummaryInformationView: View {
             meetingId: "12345",
             meetingName: "Sheffield Bags",
             categoryId: RaceCategory.horse.rawValue,
+            venueState: "WA",
+            venueCountry: "AUS",
             advertisedStart: RaceStartDate(
                 seconds: Date().timeIntervalSince1970 + 200
             )
