@@ -15,7 +15,7 @@ A user should always see 5 races, and they should be sorted by time ascending. R
 - As a user, I should not see races that are one minute past the advertised start
 - As a user, I should be able to filter my list of races by the following categories: Horse, Harness & Greyhound racing
 - As a user, I can deselect all filters to show the next 5 from of all racing categories
-- As a user I should see the meeting name, race number and advertised start as a countdown for each race.
+- As a user, I should see the meeting name, race number and advertised start as a countdown for each race.
 - As a user, I should always see 5 races and data should automatically refresh
 
 ## Technical Requirements

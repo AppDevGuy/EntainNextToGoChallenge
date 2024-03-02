@@ -43,6 +43,12 @@
 		B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBA2B92E67200781636 /* RaceCategory.swift */; };
 		B76F3EBD2B92E75E00781636 /* RaceDisplayDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBC2B92E75E00781636 /* RaceDisplayDataService.swift */; };
 		B76F3EBF2B92EB8B00781636 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBE2B92EB8B00781636 /* StringExtension.swift */; };
+		B76F3EC22B930C3B00781636 /* RaceSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */; };
+		B76F3EC42B930C9000781636 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EC32B930C9000781636 /* Sizes.swift */; };
+		B76F3EC82B9315D900781636 /* RaceSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */; };
+		B76F3ECA2B93170600781636 /* RaceSummaryInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */; };
+		B76F3ECC2B931C5100781636 /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECB2B931C5100781636 /* RaceListView.swift */; };
+		B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +109,12 @@
 		B76F3EBC2B92E75E00781636 /* RaceDisplayDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDisplayDataService.swift; sourceTree = "<group>"; };
 		B76F3EBE2B92EB8B00781636 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		B76F3EC02B92F29D00781636 /* MockJSONDataReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MockJSONDataReadMe.md; sourceTree = "<group>"; };
+		B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryView.swift; sourceTree = "<group>"; };
+		B76F3EC32B930C9000781636 /* Sizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryViewModel.swift; sourceTree = "<group>"; };
+		B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryInformationView.swift; sourceTree = "<group>"; };
+		B76F3ECB2B931C5100781636 /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
+		B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +248,8 @@
 		B76F3E7F2B8E06C500781636 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3EC62B9315C600781636 /* Views */,
+				B76F3EC52B9315C100781636 /* ViewModels */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -255,6 +269,7 @@
 				B76F3E842B8E071B00781636 /* Colors.swift */,
 				B76F3E822B8E071000781636 /* Fonts.swift */,
 				B76F3E882B8E0A5800781636 /* Icons.swift */,
+				B76F3EC32B930C9000781636 /* Sizes.swift */,
 				B76F3E862B8E075500781636 /* TextViewModifiers.swift */,
 			);
 			path = Styles;
@@ -286,6 +301,25 @@
 				B76F3EAE2B8F676C00781636 /* Constants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B76F3EC52B9315C100781636 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */,
+				B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B76F3EC62B9315C600781636 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */,
+				B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */,
+				B76F3ECB2B931C5100781636 /* RaceListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +460,7 @@
 				B76F3E852B8E071B00781636 /* Colors.swift in Sources */,
 				B76F3E892B8E0A5800781636 /* Icons.swift in Sources */,
 				B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */,
+				B76F3ECC2B931C5100781636 /* RaceListView.swift in Sources */,
 				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
 				B76F3EA62B8F5F2700781636 /* TimerManager.swift in Sources */,
 				B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */,
@@ -434,13 +469,18 @@
 				B76F3E982B8F436500781636 /* JSONUtility.swift in Sources */,
 				B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */,
 				B76F3EBF2B92EB8B00781636 /* StringExtension.swift in Sources */,
+				B76F3ECA2B93170600781636 /* RaceSummaryInformationView.swift in Sources */,
 				B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */,
 				B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */,
 				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
 				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
 				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
+				B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */,
 				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
+				B76F3EC42B930C9000781636 /* Sizes.swift in Sources */,
+				B76F3EC82B9315D900781636 /* RaceSummaryViewModel.swift in Sources */,
+				B76F3EC22B930C3B00781636 /* RaceSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EntainNextToGo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Next to Go";
@@ -643,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EntainNextToGo/Preview Content\"";
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Next to Go";

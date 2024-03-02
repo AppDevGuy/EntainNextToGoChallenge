@@ -11,13 +11,13 @@ public class RaceCountDownStringHelper {}
 
 // MARK: - Private Functions
 
-fileprivate extension RaceCountDownStringHelper {
+private extension RaceCountDownStringHelper {
 
     func getDisplayTime(for epochTime: Double, date: Date) -> String {
         // Convert epoch time to Date
         let epochDate = Date(timeIntervalSince1970: epochTime)
-        // Calculate the difference in seconds
-        let diffInSeconds = Int(epochDate.timeIntervalSince(date))
+        // Calculate the difference in seconds - round to closest whole number
+        let diffInSeconds = Int(epochDate.timeIntervalSince(date).rounded(.toNearestOrAwayFromZero))
         // Determine if there is a negative time difference for display.
         let isNegative = diffInSeconds < 0
         let absoluteSeconds = abs(diffInSeconds)
@@ -32,8 +32,10 @@ fileprivate extension RaceCountDownStringHelper {
             return "\(isNegative ? "-" : "")\(minutes)m"
         } else if minutes > 0 {
             return "\(isNegative ? "-" : "")\(minutes)m \(seconds)s"
-        } else {
+        } else if seconds > 0 {
             return "\(isNegative ? "-" : "")\(seconds)s"
+        } else {
+            return "0s"
         }
     }
 

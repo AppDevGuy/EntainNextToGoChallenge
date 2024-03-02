@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct Icons {}
+struct Icons {
+    static let info = "info.circle"
+    static let chevronRight = "chevron.right"
+}
 
 extension RaceCategory {
 

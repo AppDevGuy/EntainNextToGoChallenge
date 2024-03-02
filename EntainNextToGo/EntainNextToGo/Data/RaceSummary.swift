@@ -8,7 +8,8 @@
 import Foundation
 
 /// If you are reading this, thank you for having good naming conventions.
-struct RaceSummary: Codable {
+struct RaceSummary: Codable, Identifiable {
+    var id = UUID()
     let raceId: String
     let raceName: String
     let raceNumber: Int

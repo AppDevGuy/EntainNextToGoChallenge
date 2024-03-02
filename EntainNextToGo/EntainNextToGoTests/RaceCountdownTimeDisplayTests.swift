@@ -187,4 +187,38 @@ final class RaceCountdownTimeDisplayTests: XCTestCase {
         XCTAssertEqual(displayTime, "-1m 59s")
     }
 
+    /// Caught an edge case where hitting 0 seconds takes 2 seconds to become -1s
+    func testShouldReturnCorrectValueForGoingFromPositiveToNegativeWithStaticEpoch() throws {
+        let date = Date(timeIntervalSince1970: 1709034850)
+        // Set for 1 second more
+        var epoch: TimeInterval = 1709034851
+        var displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "1s")
+        // Set for 0 second more
+        epoch = 1709034850
+        displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "0s")
+        // Set for -1 second more
+        epoch = 1709034849
+        displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-1s")
+    }
+
+    /// Caught an edge case where hitting 0 seconds takes 2 seconds to become -1s
+    func testShouldReturnCorrectValueForGoingFromPositiveToNegativeWithDynamicEpoch() throws {
+        let date = Date()
+        // Set for 1 second more
+        var epoch: TimeInterval = date.timeIntervalSince1970 + 1
+        var displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "1s")
+        // Set for 0 second more
+        epoch = date.timeIntervalSince1970
+        displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "0s")
+        // Set for -1 second more
+        epoch = date.timeIntervalSince1970 - 1
+        displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "-1s")
+    }
+
 }
