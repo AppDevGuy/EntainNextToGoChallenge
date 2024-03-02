@@ -50,6 +50,8 @@
 		B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */; };
 		B76F3ED02B9343E200781636 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECF2B9343E200781636 /* RouterView.swift */; };
 		B76F3ED22B9343FC00781636 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED12B9343FC00781636 /* Router.swift */; };
+		B76F3ED42B9370FC00781636 /* RaceCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED32B9370FC00781636 /* RaceCategoryView.swift */; };
+		B76F3ED62B93712100781636 /* RaceCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewModel.swift; sourceTree = "<group>"; };
 		B76F3ECF2B9343E200781636 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		B76F3ED12B9343FC00781636 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B76F3ED32B9370FC00781636 /* RaceCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategoryView.swift; sourceTree = "<group>"; };
+		B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +313,7 @@
 		B76F3EC52B9315C100781636 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */,
 				B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */,
 				B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */,
 			);
@@ -318,6 +323,7 @@
 		B76F3EC62B9315C600781636 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B76F3ED32B9370FC00781636 /* RaceCategoryView.swift */,
 				B76F3ECB2B931C5100781636 /* RaceListView.swift */,
 				B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */,
 				B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */,
@@ -476,9 +482,11 @@
 				B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */,
 				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
+				B76F3ED62B93712100781636 /* RaceCategoryViewModel.swift in Sources */,
 				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
 				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
 				B76F3ED02B9343E200781636 /* RouterView.swift in Sources */,
+				B76F3ED42B9370FC00781636 /* RaceCategoryView.swift in Sources */,
 				B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */,
 				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
 				B76F3ED22B9343FC00781636 /* Router.swift in Sources */,

@@ -16,12 +16,14 @@ class Router: ObservableObject {
         case raceListView
         /// To view an individual race
         case raceInformationView(RaceSummary)
+        /// Race Filter View
+        case raceFilterView
     }
 
     // Used to programatically control our navigation stack
     @Published var path: NavigationPath = NavigationPath()
 
-    var raceListViewModel: RaceListViewModel
+    @Bindable var raceListViewModel: RaceListViewModel
 
     // MARK: - Lifecycle
 
@@ -36,6 +38,8 @@ class Router: ObservableObject {
                 RaceListView(viewModel: raceListViewModel)
             case .raceInformationView(let raceSummary):
                 RaceSummaryInformationView(raceSummary: raceSummary)
+            case .raceFilterView:
+                RaceCategoryView(viewModel: RaceCategoryViewModel(activeCategories: $raceListViewModel.activeRaceCategories))
         }
     }
 

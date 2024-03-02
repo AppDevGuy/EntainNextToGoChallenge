@@ -17,32 +17,37 @@ struct RaceListView: View {
     }
 
     var body: some View {
-        // The main content
-        ZStack {
-            List {
-                ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
-                    RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
-                        .background(Colors.Background.primary)
-                        .listRowBackground(Colors.Background.primary)
-                        .onTapGesture {
-                            router.navigateTo(.raceInformationView(summary))
-                        }
-                }
+        List {
+            ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
+                RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
+                    .background(Colors.Background.primary)
+                    .listRowBackground(Colors.Background.primary)
+                    .onTapGesture {
+                        router.navigateTo(.raceInformationView(summary))
+                    }
+                    .id(viewModel.currentDate)
             }
         }
-        .navigationTitle("Next to go")
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .navigationBarLeading) {
                 if viewModel.isFetching {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .scaleEffect(1.0)
                 }
             }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    router.navigateTo(.raceFilterView)
+                }) {
+                    Image(systemName: Icons.filter)
+                }
+            }
         }
+        .navigationTitle("Next to go")
         .background(Colors.Background.secondary)
-        .id(viewModel.currentDate)
         .onAppear() {
+            if viewModel.raceSummaries.count > 1 { return }
             viewModel.fetchData()
         }
     }

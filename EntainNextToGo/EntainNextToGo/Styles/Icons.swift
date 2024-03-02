@@ -8,8 +8,8 @@
 import Foundation
 
 struct Icons {
-    static let info = "info.circle"
     static let chevronRight = "chevron.right"
+    static let filter = "line.3.horizontal.decrease.circle"
 }
 
 extension RaceCategory {

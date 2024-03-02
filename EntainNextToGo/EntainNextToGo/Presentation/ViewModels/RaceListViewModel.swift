@@ -23,6 +23,13 @@ import Combine
     private let _raceDataDisplayService: RaceDisplayDataService
     /// Race Summary Data
     private(set) var raceSummaries: [RaceSummary] = []
+    /// Setup the filter categories
+    var activeRaceCategories: [RaceCategory] = [.greyhound, .harness, .horse] {
+        didSet {
+            _raceDataDisplayService.raceSummaryFilters = activeRaceCategories
+            raceSummaries = _raceDataDisplayService.displayRaceSummaries
+        }
+    }
     /// Current date object is used to update the display.
     private(set) var currentDate = Date()
     /// Loading state
