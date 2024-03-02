@@ -18,11 +18,3 @@ import Foundation
     }
 
 }
-
-public extension RaceSummaryViewModel {
-
-    func didTapView() {
-        // TODO: Call Coordinator to open the information view
-    }
-
-}

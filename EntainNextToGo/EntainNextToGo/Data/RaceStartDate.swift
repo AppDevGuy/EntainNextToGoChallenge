@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RaceStartDate: Codable {
+struct RaceStartDate: Codable, Hashable {
     /// Epoch time.
     let seconds: Double
 }

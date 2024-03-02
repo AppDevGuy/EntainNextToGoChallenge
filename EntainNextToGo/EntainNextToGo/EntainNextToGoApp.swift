@@ -9,9 +9,27 @@ import SwiftUI
 
 @main
 struct EntainNextToGoApp: App {
+
+    let raceListViewModel = RaceListViewModel(
+        displayUpdateTimer: TimerManager(interval: 1),
+        raceDataServiceTimer: TimerManager(interval: 15),
+        raceDataService: RaceDataService(),
+        raceDataDisplayService:
+            RaceDisplayDataService(
+                currentDateTime: {
+                    Date()
+                }
+            )
+    )
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // Create the Router instance
+            let router = Router(raceListViewModel: raceListViewModel)
+
+            // Pass the Router instance to RouterView
+            RouterView(router: router) {
+                router.view(for: .raceListView)
+            }
         }
-    }
-}
+    }}

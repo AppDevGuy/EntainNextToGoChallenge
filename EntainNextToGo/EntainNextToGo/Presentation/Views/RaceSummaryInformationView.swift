@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RaceSummaryInformationView: View {
-
+    
+    @EnvironmentObject var router: Router
     private var raceSummary: RaceSummary
 
     init(raceSummary: RaceSummary) {
@@ -16,11 +17,7 @@ struct RaceSummaryInformationView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: Sizes.Space.small) {
-            HStack {
-                Text("Race Information")
-                    .subheadlineStyle()
-            }
+        VStack(alignment: .leading, spacing: Sizes.Space.regular) {
             HStack(alignment: .top) {
                 Text("Race Name:")
                     .subtitleStyle()
@@ -45,7 +42,9 @@ struct RaceSummaryInformationView: View {
                 Text("\(Date(timeIntervalSince1970: raceSummary.advertisedStart.seconds))")
                     .bodyStyle()
             }
+            Spacer()
         }
+        .navigationTitle("Race information")
         .accessibilityLabel(Text("Race Information: Race category \(raceSummary.categoryId.raceCategory.categoryName) for Meet \(raceSummary.meetingName). Race number \(raceSummary.raceNumber)"))
     }
 }

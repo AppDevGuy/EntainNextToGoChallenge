@@ -15,5 +15,5 @@ class NetworkManager: NetworkInterface {
             .map(\.data)
             .eraseToAnyPublisher()
     }
-    
+
 }

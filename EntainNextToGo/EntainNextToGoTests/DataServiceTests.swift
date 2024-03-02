@@ -32,7 +32,7 @@ final class DataServiceTests: XCTestCase {
         let dataService = RaceDataService(networkFetcher: mockFetcher)
         let expectation = XCTestExpectation(description: "Fetch race data")
 
-        dataService.fetchRaceData(from: URL(string: "https://example.com/data")!)
+        dataService.fetchRaceData(from: "https://example.com/data")
             .sink(receiveCompletion: { completion in
                 if case .failure(let error) = completion {
                     XCTFail("Request failed with error: \(error)")
@@ -55,7 +55,7 @@ final class DataServiceTests: XCTestCase {
         let dataService = RaceDataService(networkFetcher: mockFetcher)
         let expectation = XCTestExpectation(description: "Fail to fetch race data")
 
-        dataService.fetchRaceData(from: URL(string: "https://example.com/data")!)
+        dataService.fetchRaceData(from: "https://example.com/data")
             .sink(receiveCompletion: { completion in
                 if case .finished = completion {
                     XCTFail("Should not finish without error")
@@ -75,10 +75,10 @@ final class DataServiceTests: XCTestCase {
         let dataService = RaceDataService(networkFetcher: mockFetcher)
         let expectation = XCTestExpectation(description: "Fail to fetch race data")
 
-        dataService.fetchRaceData(from: URL(string: "https://example.com/data")!)
+        dataService.fetchRaceData(from: "https://example.com/data")
             .sink(receiveCompletion: { completion in
-                if case .failure(let failure as URLError) = completion {
-                    XCTAssertEqual(failure, urlError)
+                if case .failure(let failure as RaceDateServiceError) = completion {
+                    XCTAssertEqual(failure, RaceDateServiceError.networkError(urlError))
                 } else {
                     XCTFail("Should not finish without error")
                 }

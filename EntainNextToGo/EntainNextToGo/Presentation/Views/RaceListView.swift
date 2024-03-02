@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RaceListView: View {
     
+    @EnvironmentObject var router: Router
     private var viewModel: RaceListViewModel
 
     init(viewModel: RaceListViewModel) {
@@ -17,67 +18,43 @@ struct RaceListView: View {
 
     var body: some View {
         // The main content
-        List {
-            ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
-                RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
-                    .background(Colors.Background.primary)
-                    .listRowBackground(Colors.Background.primary)
+        ZStack {
+            List {
+                ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
+                    RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
+                        .background(Colors.Background.primary)
+                        .listRowBackground(Colors.Background.primary)
+                        .onTapGesture {
+                            router.navigateTo(.raceInformationView(summary))
+                        }
+                }
+            }
+        }
+        .navigationTitle("Next to go")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                if viewModel.isFetching {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .scaleEffect(1.0)
+                }
             }
         }
         .background(Colors.Background.secondary)
         .id(viewModel.currentDate)
+        .onAppear() {
+            viewModel.fetchData()
+        }
     }
 }
 
 #Preview {
     RaceListView(
         viewModel:
-            RaceListViewModel(
-                displayUpdateTimer: TimerManager(interval: 1),
-                raceSummaries: [
-                    RaceSummary(
-                        raceId: "1",
-                        raceName: "The Neds Classic",
-                        raceNumber: 1,
-                        meetingId: "12345",
-                        meetingName: "Sheffield Bags",
-                        categoryId: RaceCategory.horse.rawValue,
-                        advertisedStart: RaceStartDate(
-                            seconds: Date().timeIntervalSince1970 + 10
-                        )
-                    ),
-                    RaceSummary(
-                        raceId: "1",
-                        raceName: "The Neds Classic",
-                        raceNumber: 2,
-                        meetingId: "12345",
-                        meetingName: "Sheffield Bags",
-                        categoryId: RaceCategory.harness.rawValue,
-                        advertisedStart: RaceStartDate(
-                            seconds: Date().timeIntervalSince1970 + 40
-                        )
-                    ),
-                    RaceSummary(
-                        raceId: "1",
-                        raceName: "The Neds Classic",
-                        raceNumber: 3,
-                        meetingId: "12345",
-                        meetingName: "Sheffield Bags",
-                        categoryId: RaceCategory.greyhound.rawValue,
-                        advertisedStart: RaceStartDate(
-                            seconds: Date().timeIntervalSince1970 + 140
-                        )
-                    ),
-                    RaceSummary(
-                        raceId: "1",
-                        raceName: "The Neds Classic",
-                        raceNumber: 4,
-                        meetingId: "12345",
-                        meetingName: "Sheffield Bags",
-                        categoryId: RaceCategory.horse.rawValue,
-                        advertisedStart: RaceStartDate(
-                            seconds: Date().timeIntervalSince1970 + 240
-                        )
-                    ),
-                ]))
+            RaceListViewModel(displayUpdateTimer: TimerManager(interval: 1), raceDataServiceTimer: TimerManager(interval: 30), raceDataService: RaceDataService(), raceDataDisplayService: RaceDisplayDataService(currentDateTime: {
+                Date()
+            }))
+    )
 }
+
+

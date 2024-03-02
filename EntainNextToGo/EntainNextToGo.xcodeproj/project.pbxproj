@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E4E2B8DFD3900781636 /* EntainNextToGoApp.swift */; };
-		B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E502B8DFD3900781636 /* ContentView.swift */; };
 		B76F3E532B8DFD3A00781636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E522B8DFD3A00781636 /* Assets.xcassets */; };
 		B76F3E562B8DFD3A00781636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E552B8DFD3A00781636 /* Preview Assets.xcassets */; };
 		B76F3E6A2B8DFD3B00781636 /* EntainNextToGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */; };
@@ -49,6 +48,8 @@
 		B76F3ECA2B93170600781636 /* RaceSummaryInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */; };
 		B76F3ECC2B931C5100781636 /* RaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECB2B931C5100781636 /* RaceListView.swift */; };
 		B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */; };
+		B76F3ED02B9343E200781636 /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ECF2B9343E200781636 /* RouterView.swift */; };
+		B76F3ED22B9343FC00781636 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED12B9343FC00781636 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +72,6 @@
 /* Begin PBXFileReference section */
 		B76F3E4B2B8DFD3900781636 /* EntainNextToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntainNextToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76F3E4E2B8DFD3900781636 /* EntainNextToGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoApp.swift; sourceTree = "<group>"; };
-		B76F3E502B8DFD3900781636 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B76F3E522B8DFD3A00781636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B76F3E552B8DFD3A00781636 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B76F3E5B2B8DFD3A00781636 /* EntainNextToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EntainNextToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +115,8 @@
 		B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceSummaryInformationView.swift; sourceTree = "<group>"; };
 		B76F3ECB2B931C5100781636 /* RaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListView.swift; sourceTree = "<group>"; };
 		B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceListViewModel.swift; sourceTree = "<group>"; };
+		B76F3ECF2B9343E200781636 /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		B76F3ED12B9343FC00781636 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +169,6 @@
 			children = (
 				B76F3EAD2B8F661A00781636 /* Constants */,
 				B76F3E522B8DFD3A00781636 /* Assets.xcassets */,
-				B76F3E502B8DFD3900781636 /* ContentView.swift */,
 				B76F3E7E2B8E06BE00781636 /* Data */,
 				B76F3E7D2B8E06B900781636 /* Domain */,
 				B76F3E4E2B8DFD3900781636 /* EntainNextToGoApp.swift */,
@@ -248,8 +249,10 @@
 		B76F3E7F2B8E06C500781636 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3EC62B9315C600781636 /* Views */,
+				B76F3ED12B9343FC00781636 /* Router.swift */,
+				B76F3ECF2B9343E200781636 /* RouterView.swift */,
 				B76F3EC52B9315C100781636 /* ViewModels */,
+				B76F3EC62B9315C600781636 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -306,8 +309,8 @@
 		B76F3EC52B9315C100781636 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */,
 				B76F3ECD2B931C5F00781636 /* RaceListViewModel.swift */,
+				B76F3EC72B9315D900781636 /* RaceSummaryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -315,9 +318,9 @@
 		B76F3EC62B9315C600781636 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */,
-				B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */,
 				B76F3ECB2B931C5100781636 /* RaceListView.swift */,
+				B76F3EC92B93170600781636 /* RaceSummaryInformationView.swift */,
+				B76F3EC12B930C3B00781636 /* RaceSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,7 +462,6 @@
 				B76F3E832B8E071000781636 /* Fonts.swift in Sources */,
 				B76F3E852B8E071B00781636 /* Colors.swift in Sources */,
 				B76F3E892B8E0A5800781636 /* Icons.swift in Sources */,
-				B76F3E512B8DFD3900781636 /* ContentView.swift in Sources */,
 				B76F3ECC2B931C5100781636 /* RaceListView.swift in Sources */,
 				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
 				B76F3EA62B8F5F2700781636 /* TimerManager.swift in Sources */,
@@ -476,8 +478,10 @@
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
 				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
 				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
+				B76F3ED02B9343E200781636 /* RouterView.swift in Sources */,
 				B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */,
 				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
+				B76F3ED22B9343FC00781636 /* Router.swift in Sources */,
 				B76F3EC42B930C9000781636 /* Sizes.swift in Sources */,
 				B76F3EC82B9315D900781636 /* RaceSummaryViewModel.swift in Sources */,
 				B76F3EC22B930C3B00781636 /* RaceSummaryView.swift in Sources */,

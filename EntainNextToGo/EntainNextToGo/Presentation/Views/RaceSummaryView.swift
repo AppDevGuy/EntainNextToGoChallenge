@@ -18,7 +18,7 @@ struct RaceSummaryView: View {
     private var raceStartTimeTextColor: Color {
         let startTime = viewModel.raceSummary.advertisedStart.seconds
         let currentDiff = startTime - Date().timeIntervalSince1970
-        let hasStarted = currentDiff < 1
+        let hasStarted = currentDiff < 0
         if hasStarted {
             return .red
         }
@@ -45,7 +45,12 @@ struct RaceSummaryView: View {
                 }
                 .padding(.horizontal, Sizes.Space.regular)
                 Spacer()
-                Text(viewModel.raceCountDownStringHelper.getDisplayString(for: viewModel.raceSummary.advertisedStart.seconds, from: viewModel.currentDate))
+                Text(viewModel
+                    .raceCountDownStringHelper
+                    .getDisplayString(
+                        for: viewModel.raceSummary.advertisedStart.seconds,
+                        from: viewModel.currentDate
+                    ))
                     .foregroundStyle(raceStartTimeTextColor)
                     .boldBodyStyle()
                     .padding(.horizontal, Sizes.Space.small)
@@ -56,12 +61,6 @@ struct RaceSummaryView: View {
                     .frame(width: Sizes.Icon.small, height: Sizes.Icon.small)
             }
         }
-        .background(
-            Colors.Background.primary
-                .onTapGesture {
-                    viewModel.didTapView()
-                }
-        )
         .accessibilityLabel(Text("\(viewModel.raceSummary.categoryId.raceCategory.categoryName) for Meet \(viewModel.raceSummary.meetingName) happening in \(viewModel.raceCountDownStringHelper.getDisplayString(for: viewModel.raceSummary.advertisedStart.seconds)). Race \(viewModel.raceSummary.raceNumber). Tap row to see more information."))
     }
 }

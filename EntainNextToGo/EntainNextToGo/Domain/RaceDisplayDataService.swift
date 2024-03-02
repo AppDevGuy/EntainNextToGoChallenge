@@ -62,7 +62,15 @@ private extension RaceDisplayDataService {
     /// We want the date sorted based on lowest value to highest value where lowest value is first and highest value is last.
     func getStartTimeSortedRaceData(for races: [RaceSummary]) -> [RaceSummary] {
         races.sorted {
-            $0.advertisedStart.seconds < $1.advertisedStart.seconds
+            let a = $0.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero)
+            let b = $1.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero)
+            if a == b {
+                // If the seconds are equal, sort alphabetically by raceName
+                return $0.raceName < $1.raceName
+            } else {
+                // Otherwise, sort by the seconds
+                return a < b
+            }
         }
     }
 
@@ -87,6 +95,17 @@ private extension RaceDisplayDataService {
         return getFilteredRaceTypeData().filter {
             $0.advertisedStart.seconds > raceExpiryDate
         }
+    }
+
+}
+
+// MARK: - Public Methods
+
+public extension RaceDisplayDataService {
+
+    func updateRaceSummaries(with summaries: [RaceSummary]) {
+        raceSummaries = summaries
+        updateDisplayRaceSummaryData()
     }
 
 }

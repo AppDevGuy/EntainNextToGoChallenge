@@ -293,8 +293,8 @@ final class RaceDisplayDataServiceTests: XCTestCase {
             date
         }
         XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 44)
-        let lowest = try XCTUnwrap(raceSummaries.first?.advertisedStart.seconds)
-        let highest = try XCTUnwrap(raceSummaries.last?.advertisedStart.seconds)
+        let lowest = try XCTUnwrap(raceDisplayDataService.displayRaceSummaries.first?.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero))
+        let highest = try XCTUnwrap(raceDisplayDataService.displayRaceSummaries.last?.advertisedStart.seconds.rounded(.toNearestOrAwayFromZero))
         XCTAssertTrue(lowest < highest)
     }
 
@@ -325,7 +325,7 @@ private extension RaceDisplayDataServiceTests {
                 let raceData = response.data
                 let raceSummaries = raceData.raceSummaries.values
                 // Convert Dictionary.Values to Array
-                let summariesArray: [RaceSummary] = Array(raceSummaries)
+                let summariesArray = Array(raceSummaries)
                 summaries = summariesArray
             })
             .store(in: &cancellables)
