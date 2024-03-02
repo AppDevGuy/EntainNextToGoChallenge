@@ -53,6 +53,7 @@
 		B76F3ED42B9370FC00781636 /* RaceCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED32B9370FC00781636 /* RaceCategoryView.swift */; };
 		B76F3ED62B93712100781636 /* RaceCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */; };
 		B7F471732B937E910054C64F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B7F471722B937E900054C64F /* Localizable.xcstrings */; };
+		B7F471752B9381D00054C64F /* ConnectivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F471742B9381D00054C64F /* ConnectivityMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		B76F3ED32B9370FC00781636 /* RaceCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategoryView.swift; sourceTree = "<group>"; };
 		B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategoryViewModel.swift; sourceTree = "<group>"; };
 		B7F471722B937E900054C64F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B7F471742B9381D00054C64F /* ConnectivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,8 +290,9 @@
 		B76F3E8A2B8E115C00781636 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
+				B7F471742B9381D00054C64F /* ConnectivityMonitor.swift */,
 				B76F3E972B8F436500781636 /* JSONUtility.swift */,
+				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
 				B76F3EBE2B92EB8B00781636 /* StringExtension.swift */,
 			);
 			path = Utilities;
@@ -495,6 +498,7 @@
 				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
 				B76F3ED22B9343FC00781636 /* Router.swift in Sources */,
 				B76F3EC42B930C9000781636 /* Sizes.swift in Sources */,
+				B7F471752B9381D00054C64F /* ConnectivityMonitor.swift in Sources */,
 				B76F3EC82B9315D900781636 /* RaceSummaryViewModel.swift in Sources */,
 				B76F3EC22B930C3B00781636 /* RaceSummaryView.swift in Sources */,
 			);

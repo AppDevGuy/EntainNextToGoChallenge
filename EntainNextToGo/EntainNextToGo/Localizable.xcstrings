@@ -23,6 +23,12 @@
     "Next to go" : {
 
     },
+    "No races available. Please check back later." : {
+
+    },
+    "Please check your internet connection." : {
+
+    },
     "Race Category Filters" : {
 
     },
@@ -57,6 +63,9 @@
           }
         }
       }
+    },
+    "To see some races please update your filter selection." : {
+
     },
     "You can filter races by tapping on the icons below." : {
 

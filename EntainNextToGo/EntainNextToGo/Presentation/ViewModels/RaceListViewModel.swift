@@ -21,6 +21,8 @@ import Combine
     private let raceDataService: RaceDataService
     /// The Race Data Display Service
     private let _raceDataDisplayService: RaceDisplayDataService
+    /// Observe changes in network connectivity,
+    let networkConnectivity: NetworkMonitoringInterface
     /// Race Summary Data
     private(set) var raceSummaries: [RaceSummary] = []
     /// Setup the filter categories
@@ -37,11 +39,12 @@ import Combine
 
     // MARK: - Lifecycle
 
-    init(displayUpdateTimer: TimerManager, raceDataServiceTimer: TimerManager, raceDataService: RaceDataService, raceDataDisplayService: RaceDisplayDataService) {
+    init(displayUpdateTimer: TimerManager, raceDataServiceTimer: TimerManager, raceDataService: RaceDataService, raceDataDisplayService: RaceDisplayDataService, networkConnectivity: NetworkMonitoringInterface) {
         self.displayUpdateTimer = displayUpdateTimer
         self.raceDataServiceTimer = raceDataServiceTimer
         self.raceDataService = raceDataService
         self._raceDataDisplayService = raceDataDisplayService
+        self.networkConnectivity = networkConnectivity
         setupObservers()
     }
 
@@ -65,7 +68,7 @@ private extension RaceListViewModel {
         raceDataServiceTimer.start()
             .sink(receiveValue: { [weak self] updatedDate in
                 guard let self else { return }
-                self.isFetching.toggle()
+                self.isFetching = true
                 self.fetchRaceData()
             })
             .store(in: &cancellables)
@@ -78,7 +81,7 @@ private extension RaceListViewModel {
                 guard let self else { return }
                 if case .failure(let error) = completion {
                     // Display an appropriate error.
-                    self.isFetching.toggle()
+                    self.isFetching = false
                 }
             }, receiveValue: {[weak self] response in
                 /// Use the result.
@@ -92,7 +95,7 @@ private extension RaceListViewModel {
         let summaries = Array(raceDataSummaries)
         _raceDataDisplayService.updateRaceSummaries(with: summaries)
         raceSummaries = _raceDataDisplayService.displayRaceSummaries
-        isFetching.toggle()
+        isFetching = false
     }
 
 }

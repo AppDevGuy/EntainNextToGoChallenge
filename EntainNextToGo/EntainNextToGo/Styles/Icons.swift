@@ -10,6 +10,8 @@ import Foundation
 struct Icons {
     static let chevronRight = "chevron.right"
     static let filter = "line.3.horizontal.decrease.circle"
+    static let binoculars = "binoculars.fill"
+    static let wifi = "wifi.exclamationmark"
 }
 
 extension RaceCategory {

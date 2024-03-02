@@ -19,7 +19,8 @@ struct EntainNextToGoApp: App {
                 currentDateTime: {
                     Date()
                 }
-            )
+            ),
+        networkConnectivity: ConnectivityMonitor()
     )
 
     var body: some Scene {

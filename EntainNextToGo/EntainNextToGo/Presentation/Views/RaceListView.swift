@@ -18,14 +18,36 @@ struct RaceListView: View {
 
     var body: some View {
         List {
-            ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
-                RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
-                    .background(Colors.Background.primary)
-                    .listRowBackground(Colors.Background.primary)
-                    .onTapGesture {
-                        router.navigateTo(.raceInformationView(summary))
-                    }
-                    .id(viewModel.currentDate)
+            if viewModel.raceSummaries.count < 1 {
+                VStack(spacing: Sizes.Space.extraLarge) {
+                    Spacer()
+                    Image(systemName: viewModel.networkConnectivity.isNetworkConnected ? Icons.binoculars : Icons.wifi)
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(Colors.Brand.primary)
+                    Text(
+                        viewModel.isFetching ? "Hold tight, we're racing to get your races" :
+                        viewModel.networkConnectivity.isNetworkConnected ?
+                        viewModel.activeRaceCategories.count < 1 ?
+                        "To see some races please update your filter selection." :
+                            "No races available. Please check back later." :
+                            "Please check your internet connection."
+                    )
+                    .multilineTextAlignment(.center)
+                    .subheadlineStyle()
+                    Spacer()
+                }
+                .padding(Sizes.Space.extraLarge)
+            } else {
+                ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
+                    RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
+                        .background(Colors.Background.primary)
+                        .listRowBackground(Colors.Background.primary)
+                        .onTapGesture {
+                            router.navigateTo(.raceInformationView(summary))
+                        }
+                        .id(viewModel.currentDate)
+                }
             }
         }
         .toolbar {
@@ -34,6 +56,9 @@ struct RaceListView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                         .scaleEffect(1.0)
+                } else if !viewModel.networkConnectivity.isNetworkConnected {
+                    Image(systemName: Icons.wifi)
+                        .foregroundColor(.red)
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -58,7 +83,7 @@ struct RaceListView: View {
         viewModel:
             RaceListViewModel(displayUpdateTimer: TimerManager(interval: 1), raceDataServiceTimer: TimerManager(interval: 30), raceDataService: RaceDataService(), raceDataDisplayService: RaceDisplayDataService(currentDateTime: {
                 Date()
-            }))
+            }), networkConnectivity: ConnectivityMonitor())
     )
 }
 
