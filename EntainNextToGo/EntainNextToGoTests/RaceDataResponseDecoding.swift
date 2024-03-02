@@ -14,6 +14,8 @@ final class RaceDataResponseDecoding: XCTestCase {
     // MARK: - Variables
     var jsonHelper: JSONFileHelper!
     var cancellables: Set<AnyCancellable> = []
+    /// Use this for the default JSON race data
+    private let mockDate = Date(fromString: "27 02 2024 19:56:09")
 
     // MARK: - Life Cycle
 
@@ -134,6 +136,7 @@ private extension RaceDataResponseDecoding {
         XCTAssertEqual(oldRace.meetingName, "Mandurah")
         XCTAssertEqual(oldRace.meetingId, "51942b1a-08bc-4727-bc27-25a085539ec6")
         XCTAssertEqual(oldRace.advertisedStart.seconds, 1709034720)
+        XCTAssertEqual(oldRace.categoryId.raceCategory, .greyhound)
 
         // Test race that is upcoming
         let upcomingRaceId = "bd7736b0-0f52-40e7-943f-ceb4dbd750c9"
@@ -143,6 +146,7 @@ private extension RaceDataResponseDecoding {
         XCTAssertEqual(newRace.meetingName, "Gloucester Park")
         XCTAssertEqual(newRace.meetingId, "134aa709-d6bb-4974-86aa-12dc3731140b")
         XCTAssertEqual(newRace.advertisedStart.seconds, 1709035500)
+        XCTAssertEqual(oldRace.categoryId.raceCategory, .greyhound)
     }
 
 }

@@ -34,10 +34,15 @@
 		B76F3EA82B8F63EE00781636 /* TimerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */; };
 		B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EA92B8F65DA00781636 /* NetworkManager.swift */; };
 		B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EAB2B8F65E400781636 /* NetworkInterface.swift */; };
-		B76F3EAF2B8F676C00781636 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */; };
+		B76F3EAF2B8F676C00781636 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EAE2B8F676C00781636 /* Constants.swift */; };
 		B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB02B8F679700781636 /* RaceDataService.swift */; };
 		B76F3EB32B8F67F800781636 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB22B8F67F800781636 /* MockNetworkManager.swift */; };
 		B76F3EB52B8F6AB000781636 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */; };
+		B76F3EB72B8F725200781636 /* Mock100Races.json in Resources */ = {isa = PBXBuildFile; fileRef = B76F3EB62B8F725200781636 /* Mock100Races.json */; };
+		B76F3EB92B8F72A500781636 /* RaceDisplayDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EB82B8F72A500781636 /* RaceDisplayDataServiceTests.swift */; };
+		B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBA2B92E67200781636 /* RaceCategory.swift */; };
+		B76F3EBD2B92E75E00781636 /* RaceDisplayDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBC2B92E75E00781636 /* RaceDisplayDataService.swift */; };
+		B76F3EBF2B92EB8B00781636 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3EBE2B92EB8B00781636 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,10 +93,16 @@
 		B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManagerTests.swift; sourceTree = "<group>"; };
 		B76F3EA92B8F65DA00781636 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B76F3EAB2B8F65E400781636 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
-		B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		B76F3EAE2B8F676C00781636 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B76F3EB02B8F679700781636 /* RaceDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDataService.swift; sourceTree = "<group>"; };
 		B76F3EB22B8F67F800781636 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		B76F3EB62B8F725200781636 /* Mock100Races.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mock100Races.json; sourceTree = "<group>"; };
+		B76F3EB82B8F72A500781636 /* RaceDisplayDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDisplayDataServiceTests.swift; sourceTree = "<group>"; };
+		B76F3EBA2B92E67200781636 /* RaceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategory.swift; sourceTree = "<group>"; };
+		B76F3EBC2B92E75E00781636 /* RaceDisplayDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDisplayDataService.swift; sourceTree = "<group>"; };
+		B76F3EBE2B92EB8B00781636 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		B76F3EC02B92F29D00781636 /* MockJSONDataReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MockJSONDataReadMe.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +182,7 @@
 				B76F3EB42B8F6AB000781636 /* DataServiceTests.swift */,
 				B76F3E8F2B8E147F00781636 /* DateExtensionTests.swift */,
 				B76F3E782B8DFF7300781636 /* RaceCountdownTimeDisplayTests.swift */,
+				B76F3EB82B8F72A500781636 /* RaceDisplayDataServiceTests.swift */,
 				B76F3E9F2B8F4B4700781636 /* RaceDataResponseDecoding.swift */,
 				B76F3E7A2B8E04A500781636 /* Resources */,
 				B76F3EA72B8F63EE00781636 /* TimerManagerTests.swift */,
@@ -191,8 +203,10 @@
 		B76F3E7A2B8E04A500781636 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3E7B2B8E04CC00781636 /* MockRaceData.json */,
 				B76F3EA32B8F535F00781636 /* InvalidJSONData.json */,
+				B76F3EB62B8F725200781636 /* Mock100Races.json */,
+				B76F3E7B2B8E04CC00781636 /* MockRaceData.json */,
+				B76F3EC02B92F29D00781636 /* MockJSONDataReadMe.md */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -200,8 +214,10 @@
 		B76F3E7D2B8E06B900781636 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3EA52B8F5F2700781636 /* TimerManager.swift */,
+				B76F3EBA2B92E67200781636 /* RaceCategory.swift */,
 				B76F3EB02B8F679700781636 /* RaceDataService.swift */,
+				B76F3EBC2B92E75E00781636 /* RaceDisplayDataService.swift */,
+				B76F3EA52B8F5F2700781636 /* TimerManager.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -249,6 +265,7 @@
 			children = (
 				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
 				B76F3E972B8F436500781636 /* JSONUtility.swift */,
+				B76F3EBE2B92EB8B00781636 /* StringExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -266,7 +283,7 @@
 		B76F3EAD2B8F661A00781636 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				B76F3EAE2B8F676C00781636 /* APIEndpoint.swift */,
+				B76F3EAE2B8F676C00781636 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -385,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76F3E7C2B8E04CC00781636 /* MockRaceData.json in Resources */,
+				B76F3EB72B8F725200781636 /* Mock100Races.json in Resources */,
 				B76F3EA42B8F535F00781636 /* InvalidJSONData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76F3EBD2B92E75E00781636 /* RaceDisplayDataService.swift in Sources */,
 				B76F3E832B8E071000781636 /* Fonts.swift in Sources */,
 				B76F3E852B8E071B00781636 /* Colors.swift in Sources */,
 				B76F3E892B8E0A5800781636 /* Icons.swift in Sources */,
@@ -410,11 +429,13 @@
 				B76F3E922B8E186100781636 /* RaceCountDownStringHelper.swift in Sources */,
 				B76F3EA62B8F5F2700781636 /* TimerManager.swift in Sources */,
 				B76F3E872B8E075500781636 /* TextViewModifiers.swift in Sources */,
-				B76F3EAF2B8F676C00781636 /* APIEndpoint.swift in Sources */,
+				B76F3EAF2B8F676C00781636 /* Constants.swift in Sources */,
 				B76F3E962B8F432600781636 /* RaceData.swift in Sources */,
 				B76F3E982B8F436500781636 /* JSONUtility.swift in Sources */,
 				B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */,
+				B76F3EBF2B92EB8B00781636 /* StringExtension.swift in Sources */,
 				B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */,
+				B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */,
 				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
 				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
@@ -434,6 +455,7 @@
 				B76F3EB32B8F67F800781636 /* MockNetworkManager.swift in Sources */,
 				B76F3EA02B8F4B4700781636 /* RaceDataResponseDecoding.swift in Sources */,
 				B76F3E902B8E147F00781636 /* DateExtensionTests.swift in Sources */,
+				B76F3EB92B8F72A500781636 /* RaceDisplayDataServiceTests.swift in Sources */,
 				B76F3EB52B8F6AB000781636 /* DataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,7 +612,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EntainNextToGo/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4632R9FHL5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Next to Go";
@@ -621,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"EntainNextToGo/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 4632R9FHL5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "Next to Go";

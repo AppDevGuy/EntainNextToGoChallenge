@@ -13,7 +13,6 @@ public class RaceCountDownStringHelper {}
 
 fileprivate extension RaceCountDownStringHelper {
 
-
     func getDisplayTime(for epochTime: Double, date: Date) -> String {
         // Convert epoch time to Date
         let epochDate = Date(timeIntervalSince1970: epochTime)

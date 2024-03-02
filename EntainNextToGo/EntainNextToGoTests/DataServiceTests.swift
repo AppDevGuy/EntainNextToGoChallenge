@@ -22,7 +22,9 @@ final class DataServiceTests: XCTestCase {
     }
     
     func testShouldHaveCorrectAPIEndpoint() {
-        XCTAssertEqual(APIEndpoint.baseURL, "https://api.neds.com.au/rest/v1/racing/?method=nextraces&count=10")
+        XCTAssertEqual(Constants.APIEndpoint.baseURL, "https://api.neds.com.au/rest/v1/racing/")
+        XCTAssertEqual(Constants.APIEndpoint.nextToGoDefaultURL, "https://api.neds.com.au/rest/v1/racing/?method=nextraces&count=10")
+        XCTAssertEqual(Constants.APIEndpoint.nextToGoMaximumURL, "https://api.neds.com.au/rest/v1/racing/?method=nextraces&count=100")
     }
 
     func testFetchRaceDataSuccess() {

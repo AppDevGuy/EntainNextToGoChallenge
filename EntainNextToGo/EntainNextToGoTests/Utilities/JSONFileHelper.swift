@@ -19,6 +19,7 @@ enum JSONFileName: String {
     case defaultRaceData = "MockRaceData"
     case emptyRaceData = "EmptyRaceData"
     case fourHundredCodeRaceData = "FourHundredCodeRaceData"
+    case oneHundredRacesData = "Mock100Races"
     // Do not create a file for this data
     case noFileFound = "no file found"
     // File is not json data

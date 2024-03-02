@@ -5,24 +5,19 @@
 //  Created by Sean Smith on 27/2/2024.
 //
 
-import SwiftUI
+import Foundation
 
-struct Icons {
+struct Icons {}
 
-    enum RaceType {
-        case horse
-        case harness
-        case greyhound
+extension RaceCategory {
 
-        var iconName: String {
-            switch self {
-                case .horse:
-                    "figure.equestrian.sports"
-                case .harness:
-                    "figure.seated.side"
-                case .greyhound:
-                    "dog.fill"
-            }
+    /// Returns a SF Symbol Name
+    var iconName: String {
+        switch self {
+            case .horse: "figure.equestrian.sports"
+            case .harness: "figure.seated.side"
+            case .greyhound: "dog.fill"
+            case .unknown: "questionmark.diamond"
         }
     }
 
