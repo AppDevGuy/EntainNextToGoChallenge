@@ -283,6 +283,21 @@ final class RaceDisplayDataServiceTests: XCTestCase {
         XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 28)
     }
 
+    // MARK: - Data should be ordered
+
+    func testThatResultsAreOrderedLowestEpochToHighestEpochDate() throws {
+        let date = try XCTUnwrap(mock100Date)
+        let raceSummaries = try getRaceData(for: .oneHundredRacesData)
+        XCTAssertEqual(raceSummaries.count, 45)
+        let raceDisplayDataService = RaceDisplayDataService(raceSummaries: raceSummaries) {
+            date
+        }
+        XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 44)
+        let lowest = try XCTUnwrap(raceSummaries.first?.advertisedStart.seconds)
+        let highest = try XCTUnwrap(raceSummaries.last?.advertisedStart.seconds)
+        XCTAssertTrue(lowest < highest)
+    }
+
 }
 
 private extension RaceDisplayDataServiceTests {

@@ -58,6 +58,8 @@ private extension RaceDisplayDataService {
     }
 
     /// Sort the race data in order of start date.
+    ///
+    /// We want the date sorted based on lowest value to highest value where lowest value is first and highest value is last.
     func getStartTimeSortedRaceData(for races: [RaceSummary]) -> [RaceSummary] {
         races.sorted {
             $0.advertisedStart.seconds < $1.advertisedStart.seconds
