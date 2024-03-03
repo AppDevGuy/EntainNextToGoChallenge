@@ -41,8 +41,7 @@ struct RaceListView: View {
                 }
                 .padding(Sizes.Space.extraLarge)
             } else {
-                ForEach(viewModel.raceSummaries.indices, id: \.self) { index in
-                    let summary = viewModel.raceSummaries[index]
+                ForEach(viewModel.raceSummaries, id: \.self) { summary in
                     RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
                         .background(Colors.Background.primary)
                         .listRowBackground(Colors.Background.primary)
@@ -50,7 +49,6 @@ struct RaceListView: View {
                             router.navigateTo(.raceInformationView(summary))
                         }
                         .id(viewModel.currentDate)
-                        .accessibilityIdentifier("\(AccessibilityIdentifiers.RaceListView.raceSummaryListRow)_\(index)")
                         .accessibilityAction {
                             router.navigateTo(.raceInformationView(summary))
                         }
