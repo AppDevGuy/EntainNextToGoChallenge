@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// A function that returns a data object for the purposes of comparing race summary start times with the specified current date time. 
 public typealias RaceCurrentDateTime = (() -> Date)
 
 /// Service that returns the data based on filters and maximum expiry time option.
@@ -103,6 +104,11 @@ private extension RaceDisplayDataService {
 
 public extension RaceDisplayDataService {
 
+    /// Handle new data for use.
+    ///
+    /// When recieving fresh race summary data, we need to update:
+    /// - Set the race summaries data that contains all results.
+    /// - Update the display data in accordance with the active parameters.
     func updateRaceSummaries(with summaries: [RaceSummary]) {
         raceSummaries = summaries
         updateDisplayRaceSummaryData()

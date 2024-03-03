@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Race Category View is used to display the available filters to the user in the active and inactive states.
 struct RaceCategoryView: View {
 
     private var viewModel: RaceCategoryViewModel

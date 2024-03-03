@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// The JSON Utility serves to decode the API reponse data. 
 final public class JSONUtility {
 
     /// Handle JSON Data and return the Struct model data.

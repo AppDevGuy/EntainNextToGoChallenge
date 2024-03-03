@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// When selecting a row in the Race List View, this view will appear showing more content about the race. 
 struct RaceSummaryInformationView: View {
     
     @EnvironmentObject var router: Router

@@ -7,9 +7,12 @@
 
 import SwiftUI
 
+/// The RouterView is a warpper for the view to manage the navigation and view heirarchy and loosly couple views from each other.
 struct RouterView<Content: View>: View {
 
+    /// Observes updates to the route.
     @ObservedObject var router: Router
+    /// The View Content.
     private let content: Content
 
     init(router: Router, @ViewBuilder content: @escaping () -> Content) {

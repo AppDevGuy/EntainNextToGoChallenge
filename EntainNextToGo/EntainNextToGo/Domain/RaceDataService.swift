@@ -10,8 +10,11 @@ import Combine
 
 /// Handle scenario for invalid URL.
 public enum RaceDateServiceError: Error, Equatable {
+    /// In the event the URL is invalid, return this error with the URL string.
     case invalidURL(String)
+    /// In the event that the network request fails, return the network error.
     case networkError(URLError)
+    /// In the event we recieved data but it did not conform to the Race Data Model, return this error.
     case decodingError(Error)
 
     public static func ==(lhs: RaceDateServiceError, rhs: RaceDateServiceError) -> Bool {
@@ -33,10 +36,16 @@ class RaceDataService {
 
     private let networkFetcher: NetworkInterface
 
+    /// Dependency inject the NetworkInterface. Default is the NetworkManager.
     init(networkFetcher: NetworkInterface = NetworkManager()) {
         self.networkFetcher = networkFetcher
     }
 
+    /// Will fetch the RaceData.
+    ///
+    /// Using Combine, we will receive the error or race response data for processing.
+    ///
+    /// - Returns: A publisher with either a the RaceResponse resiult or an Error formatted to the RaceDataServiceError.
     func fetchRaceData(from urlString: String) -> AnyPublisher<RaceResponse, Error> {
         guard let url = URL(string: urlString) else {
             return Fail(error: RaceDateServiceError.invalidURL("Invalid URL: \(urlString)")).eraseToAnyPublisher()

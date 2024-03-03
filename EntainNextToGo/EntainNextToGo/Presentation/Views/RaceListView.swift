@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The Race List View shows up-coming races and serves as the root view for the app.
 struct RaceListView: View {
     
     @EnvironmentObject var router: Router

@@ -8,18 +8,21 @@
 import Foundation
 import Combine
 
+/// The RaceListViewModel serves as the root view model for the app.
+///
+/// This view model is accountable for managing the events of the RaceListView.
 @Observable public class RaceListViewModel {
 
     // MARK: - Variables
 
     private var cancellables: [AnyCancellable] = []
-    /// Timer for updating display
+    /// Timer for updating display list values.
     private let displayUpdateTimer: TimerManager
-    /// Timer for fetching updated data
+    /// Timer for fetching updated data.
     private let raceDataServiceTimer: TimerManager
     /// The race data service which handles fetching new data.
     private let raceDataService: RaceDataService
-    /// The Race Data Display Service
+    /// The Race Data Display Service.
     private let _raceDataDisplayService: RaceDisplayDataService
     /// Observe changes in network connectivity,
     let networkConnectivity: NetworkMonitoringInterface
@@ -82,7 +85,7 @@ private extension RaceListViewModel {
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
                 guard let self else { return }
-                if case .failure(let error) = completion {
+                if case .failure(_) = completion {
                     // Display an appropriate error.
                     self.isFetching = false
                 }
@@ -112,7 +115,8 @@ private extension RaceListViewModel {
 // MARK: - Public Methods
 
 public extension RaceListViewModel {
-
+    
+    /// On view appear and when no data is available, this function should be called. 
     func fetchData() {
         fetchRaceData()
     }

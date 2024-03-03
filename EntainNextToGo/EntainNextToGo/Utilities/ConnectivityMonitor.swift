@@ -9,6 +9,8 @@ import UIKit
 import Network
 import Combine
 
+/// Network Monitoring interface is used to ensure that Network Connection can be monitored in real world and unit test scenarios. 
+///
 /// For purpose of unit testing.
 protocol NetworkMonitoringInterface {
     func startMonitoring()

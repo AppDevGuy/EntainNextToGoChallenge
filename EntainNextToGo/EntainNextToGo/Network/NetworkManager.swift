@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Network manager  manages the network requests.
 class NetworkManager: NetworkInterface {
 
     func fetchData(from url: URL) -> AnyPublisher<Data, URLError> {

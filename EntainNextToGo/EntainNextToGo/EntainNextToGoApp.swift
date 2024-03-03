@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct EntainNextToGoApp: App {
 
+    /// The race list view model serves as the parent view model for the app functionality. 
     let raceListViewModel = RaceListViewModel(
         displayUpdateTimer: TimerManager(interval: 1),
         raceDataServiceTimer: TimerManager(interval: 15),

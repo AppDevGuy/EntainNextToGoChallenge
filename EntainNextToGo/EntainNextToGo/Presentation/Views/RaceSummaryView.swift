@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// The Race Summary View is a row in the Race List View.
 struct RaceSummaryView: View {
 
     private var viewModel: RaceSummaryViewModel

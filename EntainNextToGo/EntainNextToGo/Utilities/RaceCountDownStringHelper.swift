@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// The Race Count Down String Helper formats time strings into human readable time.
+///
+/// This class takes the race start tme in epoch seconds,
+/// compares against a provided date and returns a formatted string used in the
+/// Race Summary View  to display how long until a race starts in human readable time.
 public class RaceCountDownStringHelper {}
 
 // MARK: - Private Functions

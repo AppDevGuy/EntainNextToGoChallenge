@@ -29,14 +29,19 @@ import Combine
 final public class TimerManager {
 
     // MARK: - Variables
-
+    
+    /// The proivate timer that governs the triggering of events.
     private var timer: Timer?
+    /// The interval which the timer should fire.
     private var interval: TimeInterval
+    /// Using combine, we want to enable observations of the timer fire events.
     private let subject = PassthroughSubject<Date, Never>()
+    /// Store the publishers.
     private var cancellables = Set<AnyCancellable>()
 
     // MARK: - Lifecycle
 
+    /// The specified interval which the timer should fire.
     public init(interval: TimeInterval) {
         self.interval = interval
         setupNotifications()
@@ -81,6 +86,9 @@ fileprivate extension TimerManager {
 
 public extension TimerManager {
 
+    /// Using the start funtction, you can subscribe to the timer fire events.
+    ///
+    /// The publisher will return a date object, which is set to the current date.
     func start() -> AnyPublisher<Date, Never> {
         startTimer()
         return subject.eraseToAnyPublisher()
