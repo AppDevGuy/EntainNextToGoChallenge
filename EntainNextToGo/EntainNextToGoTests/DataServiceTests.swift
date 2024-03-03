@@ -60,6 +60,7 @@ final class DataServiceTests: XCTestCase {
                 if case .finished = completion {
                     XCTFail("Should not finish without error")
                 }
+                XCTAssertNotNil(completion)
                 expectation.fulfill()
             }, receiveValue: { _ in
                 XCTFail("Should fail to return a valid response.")
@@ -79,6 +80,50 @@ final class DataServiceTests: XCTestCase {
             .sink(receiveCompletion: { completion in
                 if case .failure(let failure as RaceDateServiceError) = completion {
                     XCTAssertEqual(failure, RaceDateServiceError.networkError(urlError))
+                } else {
+                    XCTFail("Should not finish without error")
+                }
+                expectation.fulfill()
+            }, receiveValue: { _ in
+                XCTFail("Should fail to return a valid response.")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+
+    func testFetchRaceDataDecodingError() {
+        let mockFetcher = MockNetworkFetcher(jsonFileName: .invalidData, mockError: nil)
+        let dataService = RaceDataService(networkFetcher: mockFetcher)
+        let expectation = XCTestExpectation(description: "Fail to fetch race data")
+
+        dataService.fetchRaceData(from: "https://example.com/data")
+            .sink(receiveCompletion: { completion in
+                if case .failure(let failure as RaceDateServiceError) = completion {
+                    XCTAssertNotNil(failure)
+                } else {
+                    XCTFail("Should not finish without error")
+                }
+                expectation.fulfill()
+            }, receiveValue: { _ in
+                XCTFail("Should fail to return a valid response.")
+            })
+            .store(in: &cancellables)
+
+        wait(for: [expectation], timeout: 1.0)
+    }
+
+    func testFetchRaceDataInvalidURLError() {
+        let invalidURL = "😊"
+        let error = RaceDateServiceError.invalidURL("Invalid URL: \(invalidURL)")
+        let mockFetcher = MockNetworkFetcher(jsonFileName: .defaultRaceData, mockError: nil)
+        let dataService = RaceDataService(networkFetcher: mockFetcher)
+        let expectation = XCTestExpectation(description: "Fail to fetch race data")
+        dataService.fetchRaceData(from: invalidURL)
+            .sink(receiveCompletion: { completion in
+                if case .failure(let failure as RaceDateServiceError) = completion {
+                    XCTAssertNotNil(failure)
+                    XCTAssertEqual(failure, error)
                 } else {
                     XCTFail("Should not finish without error")
                 }

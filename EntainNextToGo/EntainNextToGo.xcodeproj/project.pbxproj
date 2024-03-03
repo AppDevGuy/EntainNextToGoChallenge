@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B735D35B2B943DD400A606DC /* EntainRaceListViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B735D35A2B943DD400A606DC /* EntainRaceListViewUITests.swift */; };
 		B76F3E4F2B8DFD3900781636 /* EntainNextToGoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3E4E2B8DFD3900781636 /* EntainNextToGoApp.swift */; };
 		B76F3E532B8DFD3A00781636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E522B8DFD3A00781636 /* Assets.xcassets */; };
 		B76F3E562B8DFD3A00781636 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76F3E552B8DFD3A00781636 /* Preview Assets.xcassets */; };
@@ -54,6 +55,8 @@
 		B76F3ED62B93712100781636 /* RaceCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */; };
 		B7F471732B937E910054C64F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B7F471722B937E900054C64F /* Localizable.xcstrings */; };
 		B7F471752B9381D00054C64F /* ConnectivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F471742B9381D00054C64F /* ConnectivityMonitor.swift */; };
+		B7F471772B9435000054C64F /* URLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F471762B9435000054C64F /* URLValidator.swift */; };
+		B7F471792B9438580054C64F /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F471782B9438580054C64F /* AccessibilityIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B735D35A2B943DD400A606DC /* EntainRaceListViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainRaceListViewUITests.swift; sourceTree = "<group>"; };
 		B76F3E4B2B8DFD3900781636 /* EntainNextToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntainNextToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76F3E4E2B8DFD3900781636 /* EntainNextToGoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntainNextToGoApp.swift; sourceTree = "<group>"; };
 		B76F3E522B8DFD3A00781636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		B76F3ED52B93712100781636 /* RaceCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCategoryViewModel.swift; sourceTree = "<group>"; };
 		B7F471722B937E900054C64F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B7F471742B9381D00054C64F /* ConnectivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityMonitor.swift; sourceTree = "<group>"; };
+		B7F471762B9435000054C64F /* URLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLValidator.swift; sourceTree = "<group>"; };
+		B7F471782B9438580054C64F /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,7 @@
 			children = (
 				B76F3E692B8DFD3B00781636 /* EntainNextToGoUITests.swift */,
 				B76F3E6B2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift */,
+				B735D35A2B943DD400A606DC /* EntainRaceListViewUITests.swift */,
 			);
 			path = EntainNextToGoUITests;
 			sourceTree = "<group>";
@@ -258,6 +265,7 @@
 		B76F3E7F2B8E06C500781636 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B7F471782B9438580054C64F /* AccessibilityIdentifiers.swift */,
 				B76F3ED12B9343FC00781636 /* Router.swift */,
 				B76F3ECF2B9343E200781636 /* RouterView.swift */,
 				B76F3EC52B9315C100781636 /* ViewModels */,
@@ -294,6 +302,7 @@
 				B76F3E972B8F436500781636 /* JSONUtility.swift */,
 				B76F3E912B8E186100781636 /* RaceCountDownStringHelper.swift */,
 				B76F3EBE2B92EB8B00781636 /* StringExtension.swift */,
+				B7F471762B9435000054C64F /* URLValidator.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -487,12 +496,14 @@
 				B76F3ECA2B93170600781636 /* RaceSummaryInformationView.swift in Sources */,
 				B76F3EAA2B8F65DA00781636 /* NetworkManager.swift in Sources */,
 				B76F3EBB2B92E67200781636 /* RaceCategory.swift in Sources */,
+				B7F471772B9435000054C64F /* URLValidator.swift in Sources */,
 				B76F3E9E2B8F4A2900781636 /* RaceStartDate.swift in Sources */,
 				B76F3E9C2B8F4A1600781636 /* RaceSummary.swift in Sources */,
 				B76F3ED62B93712100781636 /* RaceCategoryViewModel.swift in Sources */,
 				B76F3EAC2B8F65E400781636 /* NetworkInterface.swift in Sources */,
 				B76F3E9A2B8F49E900781636 /* RaceResponse.swift in Sources */,
 				B76F3ED02B9343E200781636 /* RouterView.swift in Sources */,
+				B7F471792B9438580054C64F /* AccessibilityIdentifiers.swift in Sources */,
 				B76F3ED42B9370FC00781636 /* RaceCategoryView.swift in Sources */,
 				B76F3ECE2B931C5F00781636 /* RaceListViewModel.swift in Sources */,
 				B76F3EB12B8F679700781636 /* RaceDataService.swift in Sources */,
@@ -525,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B76F3E6A2B8DFD3B00781636 /* EntainNextToGoUITests.swift in Sources */,
+				B735D35B2B943DD400A606DC /* EntainRaceListViewUITests.swift in Sources */,
 				B76F3E6C2B8DFD3B00781636 /* EntainNextToGoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +745,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -753,7 +765,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
@@ -772,7 +784,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seansmith.EntainNextToGoUITests;
@@ -790,7 +802,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4632R9FHL5;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.seansmith.EntainNextToGoUITests;

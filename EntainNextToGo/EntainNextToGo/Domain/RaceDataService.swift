@@ -47,7 +47,7 @@ class RaceDataService {
     ///
     /// - Returns: A publisher with either a the RaceResponse resiult or an Error formatted to the RaceDataServiceError.
     func fetchRaceData(from urlString: String) -> AnyPublisher<RaceResponse, Error> {
-        guard let url = URL(string: urlString) else {
+        guard urlString.isValidURLScheme, let url = URL(string: urlString) else {
             return Fail(error: RaceDateServiceError.invalidURL("Invalid URL: \(urlString)")).eraseToAnyPublisher()
         }
         return networkFetcher.fetchData(from: url)

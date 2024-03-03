@@ -9,23 +9,6 @@ import SwiftUI
 
 struct Fonts {
 
-    enum Title {
-        case large
-        case medium
-        case small
-
-        var font: Font {
-            switch self {
-                case .large:
-                    return .largeTitle
-                case .medium:
-                    return .title
-                case .small:
-                    return .title3
-            }
-        }
-    }
-
     enum Body {
         case regular
         case caption

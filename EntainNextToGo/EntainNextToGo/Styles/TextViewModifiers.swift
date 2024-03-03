@@ -7,33 +7,6 @@
 
 import SwiftUI
 
-struct LargeTitleTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Fonts.Title.large.font)
-            .foregroundColor(Colors.Foreground.primary)
-            .multilineTextAlignment(.leading)
-    }
-}
-
-struct HeadlineTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Fonts.Title.medium.font)
-            .foregroundColor(Colors.Foreground.primary)
-            .multilineTextAlignment(.leading)
-    }
-}
-
-struct SubHeadlineTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(Fonts.Title.small.font)
-            .foregroundColor(Colors.Foreground.primary)
-            .multilineTextAlignment(.leading)
-    }
-}
-
 struct SubtitleTextStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -81,18 +54,6 @@ struct CaptionTextStyle: ViewModifier {
 }
 
 extension View {
-
-    func titleStyle() -> some View {
-        self.modifier(LargeTitleTextStyle())
-    }
-
-    func headlineStyle() -> some View {
-        self.modifier(HeadlineTextStyle())
-    }
-
-    func subheadlineStyle() -> some View {
-        self.modifier(SubHeadlineTextStyle())
-    }
 
     func subtitleStyle() -> some View {
         self.modifier(SubtitleTextStyle())

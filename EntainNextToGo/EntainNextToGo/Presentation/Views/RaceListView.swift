@@ -41,7 +41,8 @@ struct RaceListView: View {
                 }
                 .padding(Sizes.Space.extraLarge)
             } else {
-                ForEach(viewModel.raceSummaries, id: \.self.id) { summary in
+                ForEach(viewModel.raceSummaries.indices, id: \.self) { index in
+                    let summary = viewModel.raceSummaries[index]
                     RaceSummaryView(viewModel: RaceSummaryViewModel(raceSummary: summary))
                         .background(Colors.Background.primary)
                         .listRowBackground(Colors.Background.primary)
@@ -49,9 +50,14 @@ struct RaceListView: View {
                             router.navigateTo(.raceInformationView(summary))
                         }
                         .id(viewModel.currentDate)
+                        .accessibilityIdentifier("\(AccessibilityIdentifiers.RaceListView.raceSummaryListRow)_\(index)")
+                        .accessibilityAction {
+                            router.navigateTo(.raceInformationView(summary))
+                        }
                 }
             }
         }
+        .accessibilityIdentifier(AccessibilityIdentifiers.RaceListView.raceList)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 if viewModel.isFetching {
@@ -66,8 +72,12 @@ struct RaceListView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     router.navigateTo(.raceFilterView)
-                }) {
+                }, label: {
                     Image(systemName: Icons.filter)
+                })
+                .accessibilityIdentifier(AccessibilityIdentifiers.RaceListView.categoryNavigationButton)
+                .accessibilityAction {
+                    router.navigateTo(.raceFilterView)
                 }
             }
         }
