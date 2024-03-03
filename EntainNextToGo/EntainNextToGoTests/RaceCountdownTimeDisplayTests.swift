@@ -115,20 +115,40 @@ final class RaceCountdownTimeDisplayTests: XCTestCase {
 
     // MARK: - Test Hours
 
-    /// Should return "Xh" for single digit hour any digit minutes and any digit seconds above 59 minutes 59 seconds
-    func testShouldReturnSingleDigitHourForSingleDigitHourAnyMinutesAnyDigitSeconds() throws {
+    /// Should return "Xh" for single digit hour less that one minutes
+    func testShouldReturnSingleDigitHourForSingleDigitHourZeroMinutesAnyDigitSeconds() throws {
         let date = try XCTUnwrap(mockDate)
-        let epoch: TimeInterval = 1709038620
+        // 1 hour and 40 second difference
+        let epoch: TimeInterval = date.timeIntervalSince1970 + (60 * 60) + 40
         let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
         XCTAssertEqual(displayTime, "1h")
     }
 
-    /// Should return "XXh" for double digit hour any digit minutes and any digit seconds above 9 hours 59 minutes 59 seconds
+    /// Should return "Xh Xm" for single digit hour less that ten minutes
+    func testShouldReturnSingleDigitHourForSingleDigitHourSingleDigitMinutesAnyDigitSeconds() throws {
+        let date = try XCTUnwrap(mockDate)
+        // 1 hour and 1 minute 20 second difference
+        let epoch: TimeInterval = date.timeIntervalSince1970 + (60 * 60) + 80
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "1h 1m")
+    }
+
+    /// Should return "Xh Xm" for single digit hour less that ten minutes - expect to ignore seconds when returning time - 1h 1m 59s should return 1h 1m, not 1h 2m
+    func testShouldReturnSingleDigitHourSingleDigitMinuteForSingleDigitHourSingleDigitMinutesIgnoringSeconds() throws {
+        let date = try XCTUnwrap(mockDate)
+        // 1 hour and 1 minute 50 second difference - expect to ignore seconds.
+        let epoch: TimeInterval = date.timeIntervalSince1970 + (60 * 60) + 110
+        let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
+        XCTAssertEqual(displayTime, "1h 1m")
+    }
+
+    /// Should return "XXh XXm" for double digit hour any double digit minutes and any digit seconds above 9 hours 59 minutes 59 seconds
     func testShouldReturnDoubleDigitHourForDoubleDigitHourAnyMinutesAnyDigitSeconds() throws {
         let date = try XCTUnwrap(mockDate)
-        let epoch: TimeInterval = 1709073080
+        // 10 hours and 35 minute 10 second difference
+        let epoch: TimeInterval = date.timeIntervalSince1970 + (60 * 60 * 10) + (60 * 35) + 10
         let displayTime = raceCountDownStringHelper.getDisplayString(for: epoch, from: date)
-        XCTAssertEqual(displayTime, "10h")
+        XCTAssertEqual(displayTime, "10h 35m")
     }
 
     // MARK: - Test Edge Cases

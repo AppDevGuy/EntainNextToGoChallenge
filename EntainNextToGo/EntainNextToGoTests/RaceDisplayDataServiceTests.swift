@@ -304,16 +304,16 @@ final class RaceDisplayDataServiceTests: XCTestCase {
 
     func testShouldReturnRaceSummaryDataNeedsUpdate() throws {
         let date = Date()
-        let raceDisplayDataService = RaceDisplayDataService(raceSummaries: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970))], raceExpirySeconds: expiry) {
+        let raceDisplayDataService = RaceDisplayDataService(raceSummaries: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, venueState: "", venueCountry: "", advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970))], raceExpirySeconds: expiry) {
             Date()
         }
         XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
         XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 1)
         // Calling update should trigger the update and remove the number of items
-        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 61))])
+        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, venueState: "", venueCountry: "", advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 61))])
         XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
         XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 0)
-        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 58))])
+        raceDisplayDataService.updateRaceSummaries(with: [RaceSummary(raceId: "", raceName: "", raceNumber: 1, meetingId: "", meetingName: "", categoryId: RaceCategory.harness.rawValue, venueState: "", venueCountry: "", advertisedStart: RaceStartDate(seconds: date.timeIntervalSince1970 - 58))])
         XCTAssertFalse(raceDisplayDataService.shouldUpdateDisplay())
         XCTAssertEqual(raceDisplayDataService.displayRaceSummaries.count, 1)
         // Should need to be updated after 3 second

@@ -71,13 +71,13 @@ private extension RaceListViewModel {
         raceDataServiceTimer.start()
             .sink(receiveValue: { [weak self] updatedDate in
                 guard let self else { return }
-                self.isFetching = true
                 self.fetchRaceData()
             })
             .store(in: &cancellables)
     }
 
     func fetchRaceData() {
+        isFetching = true
         raceDataService.fetchRaceData(from: Constants.APIEndpoint.nextToGoMaximumURL)
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
@@ -103,6 +103,9 @@ private extension RaceListViewModel {
 
     func updateRaceSummaries() {
         raceSummaries = _raceDataDisplayService.displayRaceSummaries
+        if raceSummaries.count < 6 && !isFetching {
+            fetchRaceData()
+        }
     }
 }
 

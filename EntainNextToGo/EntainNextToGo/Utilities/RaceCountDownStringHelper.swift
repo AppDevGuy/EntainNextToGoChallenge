@@ -26,8 +26,10 @@ private extension RaceCountDownStringHelper {
         let minutes = (absoluteSeconds % 3600) / 60
         let seconds = (absoluteSeconds % 3600) % 60
 
-        if hours > 0 {
+        if hours > 0 && minutes < 1 {
             return "\(isNegative ? "-" : "")\(hours)h"
+        } else if hours > 0 {
+            return "\(isNegative ? "-" : "")\(hours)h \(minutes)m"
         } else if minutes >= 5 {
             return "\(isNegative ? "-" : "")\(minutes)m"
         } else if minutes > 0 {
