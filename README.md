@@ -1,6 +1,7 @@
 # Next To Go App Architecture Document
 
 ## Overview
+This app is to complete the Next to go challenge required by Entain. 
 
 This document outlines the technical architecture of a SwiftUI application designed using the Model-View-ViewModel (MVVM) pattern, supplemented by a routing mechanism similar to a Coordinator, and utilizing the Combine framework for reactive programming. This structure aims to create a scalable, maintainable, and testable application that separates concerns, enhances the development workflow, and adheres to modern Swift application design principles.
 
